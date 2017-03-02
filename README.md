@@ -1,5 +1,5 @@
 ## DEMO LINK
-https://dpmango.com/github.io/uala
+https://dpmango.github.io/uala/dist/
 
 ## Getting stated
 __Development:__
