@@ -133,6 +133,7 @@ $(document).ready(function(){
   });
   $(window).scrolled(100, function() {
     if (secondStepActive){
+      console.log('recalc');
       setBodyHeight('sec');
       setAppPosition();
     } else {
