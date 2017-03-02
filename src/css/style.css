@@ -570,8 +570,8 @@ body, html {
     .hero__title {
         margin-top: 60px;
         margin-right: auto;
-        margin-bottom: 30px;
         margin-left: auto;
+        padding-bottom: 30px;
         width: 475px;
         text-align: center;
     }
@@ -582,6 +582,13 @@ body, html {
         width: auto;
         font-size: 36px;
         line-height: 46px;
+    }
+}
+@media(max-width: 414px) {
+    .hero {}
+    .hero__title {
+        font-size: 34px;
+        line-height: 40px;
     }
 }
 /* FORM */
@@ -693,7 +700,7 @@ body, html {
         width: 475px;
     }
     .form--fixed {
-        position: fixed;
+        position: absolute;
         top: 50%;
         right: auto;
         left: 50%;
@@ -883,7 +890,32 @@ body, html {
     height: 12px;
     background: #84CFB1;
 }
+.testimonials .slick-dots .slick-active button:after {
+    width: 12px;
+    height: 12px;
+    background: #84CFB1;
+}
 .testimonials .slick-dots button {
+    position: relative;
+    display: block;
+    max-width: 8px;
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    content: ' ';
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    -webkit-appearance: none;
+}
+.testimonials .slick-dots button:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     display: block;
     overflow: hidden;
     max-width: 8px;
@@ -898,6 +930,9 @@ body, html {
     cursor: pointer;
     -webkit-transition: all .4s ease;
     transition: all .4s ease;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
     -webkit-appearance: none;
 }
 .testimonials .slick-dots button:focus {
@@ -1182,12 +1217,12 @@ body, html {
     left: 0;
     padding: 15px 20px;
     background: #F8F398;
-    -webkit-transition: -webkit-transform .5s ease-in 2s;
-    transition: -webkit-transform .5s ease-in 2s;
-    transition: transform .5s ease-in 2s;
-    transition: transform .5s ease-in 2s, -webkit-transform .5s ease-in 2s;
-    -webkit-transform: translate3d(0, 120px, 0);
-            transform: translate3d(0, 120px, 0);
+    -webkit-transition: -webkit-transform .5s ease-in 0s;
+    transition: -webkit-transform .5s ease-in 0s;
+    transition: transform .5s ease-in 0s;
+    transition: transform .5s ease-in 0s, -webkit-transform .5s ease-in 0s;
+    -webkit-transform: translate3d(-100%, 0px, 0);
+            transform: translate3d(-100%, 0px, 0);
 }
 .fixed-btn .btn--primary {
     padding-top: 15px;

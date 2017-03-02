@@ -40,7 +40,7 @@
     &__title
       text-align: center
       margin-top: 60px
-      margin-bottom: 30px
+      padding-bottom: 30px
       width: 475px
       margin-left: auto
       margin-right: auto
@@ -51,6 +51,11 @@
       width: auto
       font-size: 36px
       line-height: 46px
+@media(width <= 414px)
+  .hero
+    &__title
+      font-size: 34px
+      line-height: 40px
 
 // FORM
 .form
@@ -131,7 +136,7 @@
     width: 475px
     margin-right: auto
     &--fixed
-      position: fixed
+      position: absolute
       left: 50%
       right: auto
       top: 50%
@@ -266,9 +271,13 @@
       button
         background: $colorPrimary
         size: 12px
+        &::after
+          size: 12px
+          background: $colorPrimary
     button
       display: block
-      background: #DDE4E4
+      position: relative
+      background: transparent
       content: ' '
       size: 8px
       max-width: 8px
@@ -277,9 +286,26 @@
       font-size: 0
       line-height: 0
       -webkit-appearance: none
-      overflow: hidden
       cursor: pointer
       transition: all .4s ease
+      &::after
+        display: block
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        background: #DDE4E4
+        content: ' '
+        size: 8px
+        max-width: 8px
+        border-radius: 50%
+        border: none
+        font-size: 0
+        line-height: 0
+        -webkit-appearance: none
+        overflow: hidden
+        cursor: pointer
+        transition: all .4s ease
       &:focus
         outline: none
 
@@ -489,8 +515,8 @@
   right: 0
   padding: 15px 20px
   background: $colorYellow
-  transform: translate3d(0, 120px, 0)
-  transition: transform .5s ease-in 2s
+  transform: translate3d(-100%, 0px, 0)
+  transition: transform .5s ease-in 0s
   &.visible
     @media(width <= 568px)
       transform: translate3d(0, 0px, 0)
