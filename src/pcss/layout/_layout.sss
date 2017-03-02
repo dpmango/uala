@@ -1,0 +1,106 @@
+// LAYOUT
+
+$mobile: width <= 568px
+$mobile-from: width >= 568px
+$tablet: width <= 768px
+$tablet-from: width <= 768px
+$desktop: width <= 1000px
+$desktop-from: width >= 1000px
+$wide: width <= 1200px
+$wide-from: width >= 1200px
+$hd: width <= 1680px
+$hd-from: width >= 1680px
+
+// variables
+$fontColor: #27282D
+$colorYellow: #F8F398
+$borderColor: #DDE4E4
+$mutedColor: #939999
+$colorPrimary: #84CFB1
+
+$colorGreen: #4ab68f
+$colorRed: #f45b63
+
+*
+  box-sizing: border-box
+  -webkit-overflow-scrolling: touch
+
+a
+  color: inherit
+  &:hover, &:focus, &:visited
+    text-decoration: none
+
+ul
+  list-style: none
+  li
+    display: inline-block
+
+
+body, html
+  background: white
+  color: $fontColor
+  font-family: 'Open Sans', sans-serif
+  font-size: 16px
+  max-width: 100%
+  overflow-x: hidden
+  position: relative
+
+.app
+  overflow-x: scroll
+  overflow-y: hidden
+  display: flex
+  align-items: flex-start
+  flex-direction: column
+  transition: transform .6s ease-out
+
+.section
+  transform: translate3d(0,0,0)
+  transition: all .5s ease
+  width: 100vw
+  overflow: hidden
+  flex: 1 0 auto
+  &.active
+    transform: translate3d(0,0,0)
+
+.fixed-container
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  .container
+    height: 100%
+
+.container
+  width: 100%
+  max-width: 1170px
+  padding-left: 20px
+  padding-right: 20px
+  margin-left: auto
+  margin-right: auto
+  position: relative
+
+.row
+  margin-left: -10px
+  margin-right: -10px
+  display: flex
+  @media($mobile)
+    flex-direction: column
+
+.col
+  flex-grow: 0
+  flex-shrink: 0
+  padding-left: 10px
+  padding-right: 10px
+  position: relative
+  &--half
+    flex-basis: 50%
+    width: 50%
+    @media($mobile)
+      width: 100%
+      flex-basis: 100%
+  &--auto
+    flex: 1 1 auto
+
+.text-right
+  text-align: right

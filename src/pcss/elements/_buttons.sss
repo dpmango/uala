@@ -1,0 +1,23 @@
+// buttons
+.btn
+  transition: all .4s ease-in-out
+  display: inline-block
+  text-align: center
+  cursor: pointer
+  &:focus, &:active
+    outline: none
+
+  &--primary
+    background: $colorYellow
+    color: $fontColor
+    font-weight: 600
+    font-size: 14px
+    letter-spacing: 1.2px
+    border-radius: 30px
+    padding: 15px 30px
+    min-width: 280px
+    border: 2px solid transparent
+    &:hover
+      border-color: $colorYellow
+      background: color($colorYellow a(50%))
+      transform: translate3d(0, -3px, 0)

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>dropdown</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Passa-a-Uala---01" transform="translate(-1182.000000, -214.000000)" fill="#40454C">
+            <g id="Header">
+                <g id="Choose" transform="translate(751.000000, 48.000000)">
+                    <g id="Modal" transform="translate(33.000000, 155.000000)">
+                        <path d="M402.8565,16.857 C402.5895,16.857 402.3375,16.753 402.1495,16.564 L398.2925,12.707 C397.9025,12.317 397.9025,11.682 398.2925,11.293 C398.4815,11.104 398.7325,11 398.9995,11 C399.2675,11 399.5185,11.104 399.7075,11.293 L402.8565,14.443 L406.0065,11.293 C406.1945,11.104 406.4455,11 406.7135,11 C406.9805,11 407.2325,11.104 407.4205,11.293 C407.8105,11.682 407.8105,12.317 407.4205,12.707 L403.5635,16.564 C403.3755,16.753 403.1235,16.857 402.8565,16.857" id="dropdown"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

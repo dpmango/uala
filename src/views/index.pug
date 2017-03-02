@@ -1,0 +1,193 @@
+doctype html
+html
+  head
+    // MADE WITH LOVE BY <> SERGEY KHMELEVSKOY </>
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    title UALA
+
+    //build:js js/scripts.min.js
+    script(src="components/jquery/dist/jquery.min.js")
+    script(src="components/slick-carousel/slick/slick.min.js")
+    script(src="js/main.js")
+    //endbuild
+
+    //build:css css/styles.css
+    link(rel="stylesheet" href="components/normalize-css/normalize.css" type="text/css")
+    link(rel="stylesheet" href="components/slick-carousel/slick/slick.css" type="text/css")
+    link(rel="stylesheet" href="css/style.css" type="text/css")
+    //endbuild
+
+    meta(name="description" keywords="")
+
+  body
+    .app
+      // FIRST SCREEN
+      .section#firstPage
+        // HERO
+        .hero
+          .container
+            .row
+              .col.col--half
+                i.ico.ico-logo
+                .hero__title Scopri come possiamo migliorare il tuo lavoro
+              .col.col--half
+                form(action="#").form#ctaFromFirst
+                  .form__title Quale gestionale usi attualmente?
+                  .form__wrapper
+                    .ui-select
+                      label Scegli il tuo gestionale
+                      .ui-select__drop
+                        span(data-select="Some option") That's cool
+                        span(data-select="That's awesome") That's awesome
+                        span(data-select="That's super duper") That's super duper
+                        span(data-select="Bellissimo") Bellissimo
+
+                    .text-right
+                      button(type="submit").btn.btn--primary scopri come migliorare
+        // CAPTION
+        .caption
+          .container
+            .row
+              .col.col--half
+                // Features
+                .features
+                  .features__item
+                    .features__item__wrap
+                      i.ico.ico-benefit-save
+                      span Prezzo tutto compreso
+                  .features__item
+                    .features__item__wrap
+                      i.ico.ico-benefit-computer
+                      span Prenotazioni online
+                  .features__item
+                    .features__item__wrap
+                      i.ico.ico-benefit-cash
+                      span Soddisfatti o rimborsati
+                  .features__item
+                    .features__item__wrap
+                      i.ico.ico-benefit-butterfly
+                      span Il più grande gruppo d’Italia
+
+              .col.col--half
+                // Testimonials
+                .testimonials
+                  #owlTestimonials
+                    .testimonials__slide
+                      img(src='images/svg/vogue-logo.svg' style="width: 100px")
+                      .testimonials__content
+                        p Con Uala si fissano appuntamenti per trattamenti in centri estetici o in saloni in tutta Italia tanto dal portale quanto dall’applicazione sullo smartphone. Un’idea semplice eppure efficace tant’è che, nel giro di pochi mesi, il traffico è triplicato e il sito è ancora oggi in continua espansione.
+                    .testimonials__slide
+                      img(src='images/svg/vogue-logo.svg' style="width: 100px")
+                      .testimonials__content
+                        p Con Uala si fissano appuntamenti per trattamenti in centri estetici o in saloni in tutta Italia tanto dal portale quanto dall’applicazione sullo smartphone. Un’idea semplice eppure efficace tant’è che, nel giro di pochi mesi, il traffico è triplicato e il sito è ancora oggi in continua espansione.
+
+        // FOOTER
+        footer.footer
+          .container
+            .row
+              .col.col--auto
+                .footer__wrapper
+                  i.ico.ico-logo-gray
+                  .footer__copy Copyright © 2016 Uala S.r.l.
+                  .footer__navi
+                    a(href="#") Termini e condizioni
+                    a(href='#') Privacy
+                  .footer__socials
+                    a(href='#' target='blank')
+                      i.ico.ico-fb
+                    a(href='#' target='blank')
+                      i.ico.ico-tw
+                    a(href='#' target='blank')
+                      i.ico.ico-google
+                    a(href='#' target='blank')
+                      i.ico.ico-insta
+
+      // SECOND SCREEN
+      .section#secondPage
+        // fixed form first
+        .fixed-container
+          .container
+            form(action="#").form.form--fixed#ctaFromSecond
+              .form__title.form__title--bg Passa oggi a UALA <br> ottieni subito 12 mesi gratis!
+              .form__wrapper.form__wrapper--auto
+                .ui-input
+                  label La tua email
+                  input(type="email")
+                .ui-input
+                  label Il tuo telefono
+                  input(type="tel")
+                .ui-input
+                  label Il tuo nome
+                  input(type="text")
+                .ui-radio
+                  input(type='radio' name="agree" id="agree")
+                  label(for='agree') Accetto <a href='#'>la Informativa sulla Privacy</a>
+                .text-right
+                  button(type="submit").btn.btn--primary richiedi ora
+
+        // HERO
+        .hero.hero--short
+          .container
+            .row
+              .col.col--half
+                i.ico.ico-logo
+                .hero__title Ecco come abbiamo migliorato Exagon
+              .col.col--half
+                // empty col
+
+        // CONTENT
+        .content
+          .container
+            .row
+              .col.col--half
+                .content__section
+                  .content__section__head
+                    .content__section__num 01
+                    span Lorem ispum dolor sit amet
+                  .video
+                    img(src='https://placehold.it/576x370')
+                    i.ico.ico-play
+                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  .content__important <span>Passa a UALA FULL.</span> Entro il 31/1 rottami il tuo e ricevi il gestionale GRATIS 12 mesi. Nessun costo di attivazione.
+                .content__section
+                  .content__section__head
+                    .content__section__num 02
+                    span Lorem ispum dolor sit amet
+                  .video
+                    img(src='https://placehold.it/576x370')
+                    i.ico.ico-play
+                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  .content__important <span>Passa a UALA FULL.</span> Entro il 31/1 rottami il tuo e ricevi il gestionale GRATIS 12 mesi. Nessun costo di attivazione.
+                .content__section
+                  .content__section__head
+                    .content__section__num 03
+                    span Lorem ispum dolor sit amet
+                  .video
+                    img(src='https://placehold.it/576x370')
+                    i.ico.ico-play
+                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  .content__contact <span>Hai bisogno di più informazioni?</span> Chiamaci al +39 02 80.88.76.12
+              .col.col--half
+
+
+        // FOOTER
+        footer.footer
+          .container
+            .row
+              .col.col--auto
+                .footer__wrapper
+                  i.ico.ico-logo-gray
+                  .footer__copy Copyright © 2016 Uala S.r.l.
+                  .footer__navi
+                    a(href="#") Termini e condizioni
+                    a(href='#') Privacy
+                  .footer__socials
+                    a(href='#' target='blank')
+                      i.ico.ico-fb
+                    a(href='#' target='blank')
+                      i.ico.ico-tw
+                    a(href='#' target='blank')
+                      i.ico.ico-google
+                    a(href='#' target='blank')
+                      i.ico.ico-insta

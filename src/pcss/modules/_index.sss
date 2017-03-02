@@ -1,0 +1,262 @@
+// INDEX
+.hero
+  background: linear-gradient(135deg, #86CED0, #7EC6AA)
+  height: 460px
+  padding-top: 50px
+  color: white
+  &--short
+    height: 390px
+  &__title
+    font-family: 'Montserrat'
+    font-size: 48px
+    line-height: 58px
+    font-weight: 700
+    letter-spacing: -.67px
+    margin-top: 80px
+
+@media($mobile)
+  .hero
+    height: auto
+
+// FORM
+.form
+  background: white
+  border-radius: 8px
+  color: $fontColor
+  box-shadow: 0px 14px 15px 6px color(black a(10%))
+  padding-bottom: 30px
+  width: 475px
+  margin-left: auto
+  overflow: hidden
+  &__title
+    font-size: 20px
+    font-weight: 600
+    padding: 35px 33px
+    &--bg
+      background: #F1F7F7
+      font-family: 'Montserrat'
+      font-weight: 700
+  &--fixed
+    position: absolute
+    transform: translate3d(0, 50px, 0)
+    transition: transform .3s ease-out
+    right: 20px
+    z-index: 9
+  &__wrapper
+    padding-left: 33px
+    padding-right: 33px
+    display: flex
+    flex-direction: column
+    min-height: 200px
+    justify-content: space-between
+    margin-top: 40px
+    .btn--primary
+      margin-left: auto
+    &--auto
+      .ui-input
+        margin-bottom: 20px
+      .btn--primary
+        min-width: 1px
+        width: auto
+        margin-top: 30px
+
+@media($desktop)
+  .form
+    width: 400px
+@media($mobile)
+  .form
+    width: 100%
+
+.caption
+  background: white
+
+.features
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  &__item
+    flex: 1 1 50%
+    position: relative
+    margin-top: 50px
+    margin-bottom: 50px
+    &__wrap
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      justify-content: center
+      align-items: center
+    .ico
+      flex: 0 0 33%
+    span
+      flex: 1 1 auto
+      display: inline-block
+      padding-left: 20px
+      font-family: 'Montserrat'
+      font-size: 18px
+      line-height: 22px
+      color: $mutedColor
+
+
+.testimonials
+  margin-top: 50px
+  // padding-left: 16.6%
+  &__slide
+    padding: 0
+  &__content
+    margin-top: 25px
+    color: #A4A9AA
+    font-size: 18px
+    line-height: 26px
+
+  .slick-dots
+    margin: 0
+    padding: 0
+    li
+      margin-right: 10px
+
+    .slick-active
+      button
+        background: $colorPrimary
+        size: 12px
+    button
+      background: #DDE4E4
+      size: 8px
+      max-width: 8px
+      border-radius: 50%
+      border: none
+      font-size: 0
+      line-height: 0
+      -webkit-appearance: none
+      overflow: hidden
+      cursor: pointer
+      transition: all .4s ease
+      &:focus
+        outline: none
+
+
+// CONTENT
+.content
+  margin-top: 60px
+
+  p
+    color: #40454C
+    line-height: 26px
+
+  &__important
+    margin-top: 40px
+    border: 1px solid $colorPrimary
+    border-radius: 8px
+    font-weight: 600
+    font-size: 20px
+    padding: 25px 30px
+    span
+      font-weight: 900
+      color: $colorPrimary
+
+  &__contact
+    margin-top: 40px
+    font-size: 20px
+    line-height: 32px
+    background: #F1F7F7
+    text-align: center
+    border-radius: 8px
+    padding: 35px
+    span
+      display: block
+      font-weight: 600
+
+  &__section
+    margin-bottom: 70px
+    &__head
+      font-family: 'Montserrat'
+      position: relative
+      padding: 15px 0
+      span
+        position: relative
+        z-index: 3
+        font-size: 18px
+        line-height: 28px
+    &__num
+      font-weight: 700
+      color: #F1F7F7
+      font-size: 140px
+      position: absolute
+      left: 0
+      top: 50%
+      z-index: 1
+      transform: translateY(-50%)
+
+
+.video
+  height: 370px
+  position: relative
+  overflow: hidden
+  cursor: pointer
+  z-index: 5
+  img
+    max-width: 100%
+    height: 100%
+  &::after
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: block
+    content: ' '
+    background: color(#27282D a(70%))
+    transition: all .6s ease
+  .ico
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    cursor: pointer
+    z-index: 5
+  &:hover
+    &::after
+      background: color($colorPrimary a(60%))
+    .ico
+      background-size: 28px 34px
+      background-position: 60% center
+
+// FOOTER
+.footer
+  background: #F1F7F7
+  padding: 65px 0
+  color: $mutedColor
+  font-size: 12px
+  &__wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+  .ico-logo-gray
+    margin-right: 15px
+  &__copy
+    color: $mutedColor
+    margin-right: 12px
+  &__navi
+    a
+      display: inline-block
+      position: relative
+      &::before, &::after
+        display: inline-block
+        content: ' '
+        size: 4px
+        background-color: #6A6F73
+        border-radius: 50%
+        vertical-align: middle
+      &::before
+        margin-right: 10px
+      &::after
+        display: none
+        margin-left: 10px
+      &:last-child
+        &::before
+          margin-left: 10px
+  &__socials
+    margin-left: 15px
+    a
+      &::before, &::after
+        display: none
+      margin-right: 10px
