@@ -12,7 +12,7 @@ html
     script(src="js/main.js")
     //endbuild
 
-    //build:css css/styles.css
+    //build:css css/styles2.css
     link(rel="stylesheet" href="components/normalize-css/normalize.css" type="text/css")
     link(rel="stylesheet" href="components/slick-carousel/slick/slick.css" type="text/css")
     link(rel="stylesheet" href="css/style.css" type="text/css")
@@ -126,7 +126,7 @@ html
                   label Il tuo nome
                   input(type="text")
                 .ui-radio
-                  input(type='radio' name="agree" id="agree" value="yes")
+                  input(type='checkbox' name="agree" id="agree" value="yes")
                   label(for='agree') Accetto <a href='#'>la Informativa sulla Privacy</a>
                 .text-right
                   button(type="submit").btn.btn--primary richiedi ora
@@ -137,7 +137,7 @@ html
             .row
               .col.col--half
                 i.ico.ico-logo
-                .hero__title Ecco come abbiamo migliorato Exagon
+                .hero__title Ecco come abbiamo migliorato <span id="pasteSelected">Exagon</span>
 
                 .text-center.visible-900
                   a(href='#modalForm').btn.btn--primary RICHIEDI ORA

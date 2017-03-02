@@ -113,7 +113,7 @@ gulp.task('useref', function(){
 });
 
 gulp.task('cssnano', function () {
-  return gulp.src('./dist/css/styles.css')
+  return gulp.src('./dist/css/styles2.css')
     .pipe( postcss([cssnano({
       autoprefixer: false,
       reduceIdents: {

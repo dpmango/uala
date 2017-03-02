@@ -133,12 +133,21 @@ $(document).ready(function(){
   /// FORMS LOGIC
   ///////////////
 
+  var selectedOption = "";
+
   $('#ctaFromFirst').on('submit', function(e){
     e.preventDefault();
-    setBodyHeight('second');
-    setAppPosition();
-    $('.fixed-btn').addClass('visible');
-    return false;
+    if(selectedOption != '' ){
+      $('.ui-select').removeClass('ui-select--error');
+      setBodyHeight('second');
+      setAppPosition();
+      $('.fixed-btn').addClass('visible');
+      $('#pasteSelected').text(selectedOption);
+      return false;
+    } else {
+      $('.ui-select').addClass('ui-select--error');
+      return false;
+    }
   });
 
   $('#ctaFromSecond').on('submit', function(e){
@@ -147,7 +156,7 @@ $(document).ready(function(){
     var name = form.find('input[type=text]').val();
     var phone = form.find('input[type=tel]').val();
     var email = form.find('input[type=email]').val();
-    var agreed = form.find('input[type=radio]:checked').val();
+    var agreed = form.find('input[type=checkbox]:checked').val();
 
     console.log(agreed);
 
@@ -165,9 +174,9 @@ $(document).ready(function(){
 
     if(agreed != 'yes'){
         console.log('not agreed');
-        form.find('input[type=radio]').parent().addClass('ui-radio--error');
+        form.find('input[type=checkbox]').parent().addClass('ui-radio--error');
     } else {
-        form.find('input[type=radio]').parent().removeClass('ui-radio--error');
+        form.find('input[type=checkbox]').parent().removeClass('ui-radio--error');
     }
     if(emailIsNotValid){
         form.find('input[type=email]').parent().addClass('ui-input--error');
@@ -238,7 +247,8 @@ $(document).ready(function(){
     var currentValue = $(this).data('select');
     $(this).closest('.ui-select').find('label').text(currentValue);
     $(this).closest('.ui-select').find('label').addClass('selected');
-    secondStepReady = true;
+    $('.ui-select').removeClass('ui-select--error');
+    selectedOption = currentValue;
   });
 
   // custom input trigger active class
@@ -258,13 +268,15 @@ $(document).ready(function(){
   });
 
 
-  $(window).scrolled(30, function() {
+  $(window).scrolled(10, function() {
     var wScroll = $(this).scrollTop() + 50;
     var wWidth = $(window).width();
     if (wWidth > 900){
-      $('.form--fixed').css(
-        'transform', 'translate3d(0,'+ wScroll + 'px,0)'
-      );
+      if (wScroll + $(window).height() < $(document).height() - 100 ){
+        $('.form--fixed').css(
+          'transform', 'translate3d(0,'+ wScroll + 'px,0)'
+        );
+      }
     } else {
       $('.form--fixed').css(
         'transform', 'translate3d(0,'+ 0 + 'px,0)'
