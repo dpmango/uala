@@ -84,9 +84,10 @@
     &:focus
       outline: none
   &--error
+    label
+      color: $colorRed
     input
       border-color: $colorRed
-      box-shadow: 0 0 4px color($colorRed a(30%))
 
 // RADIO
 .ui-radio
@@ -94,6 +95,11 @@
   cursor: pointer
   margin-top: -30px
   font-size: 14px
+  &--error
+    input
+      + label
+        &::before
+          box-shadow: inset 0px 0px 0 8px white, 0 0 0 1px $colorRed
   input
     width: 0.1px
     height: 0.1px

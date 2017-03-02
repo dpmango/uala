@@ -65,6 +65,31 @@ $(document).ready(function(){
         return false;
 	});
 
+  // modal
+  $('a[href^="#modalForm"]').click(function(){
+    $('.fixed-container').fadeIn();
+    $('.hero, .content, .footer').addClass('blur');
+    $('body, html').animate({scrollTop: $('.form--fixed').offset().top - 30}, 1000);
+
+  });
+
+  $('#closeModal').on('click', function(){
+    $('.fixed-container').fadeOut();
+    $('.hero, .content, .footer').removeClass('blur');
+  });
+
+  $(document).mouseup(function (e) {
+    var container = new Array();
+    container.push($('.form--fixed'));
+
+    $.each(container, function(key, value) {
+        if (!$(value).is(e.target) && $(value).has(e.target).length === 0) {
+            $('.fixed-container').fadeOut();
+            $('.hero, .content, .footer').removeClass('blur');
+        }
+    });
+  });
+
   $('#owlTestimonials').slick({
     dots: true,
     infinite: true,
@@ -82,13 +107,22 @@ $(document).ready(function(){
       $('.app').css('max-height', $('#secondPage').height() + $('#firstPage').height() );
     }
   }
-
   setBodyHeight('first'); // default is the first screen
+
+  function setAppPosition(){
+    var appNegativeMargin = 0 - $('#firstPage').height();
+    $('.app').css(
+      'transform', 'translate3d(0,-'+ $('#firstPage').height() + 'px,0)'
+    ).css('margin-bottom', appNegativeMargin);
+    secondStepActive = true;
+  }
+
 
   // recalculate height with .1s delay
   $(window).resized(function() {
     if (secondStepActive){
       setBodyHeight('sec');
+      setAppPosition();
     } else {
       setBodyHeight('first');
     }
@@ -101,13 +135,7 @@ $(document).ready(function(){
   $('#ctaFromFirst').on('submit', function(e){
     e.preventDefault();
     setBodyHeight('second');
-    // $('.app').addClass('show-next');
-    var appNegativeMargin = 0 - $('#firstPage').height();
-    $('.app').css(
-      'transform', 'translate3d(0,-'+ $('#firstPage').height() + 'px,0)'
-    ).css('margin-bottom', appNegativeMargin);
-    secondStepActive = true;
-    // $('#secondPage').addClass('active');
+    setAppPosition();
     return false;
   });
 
@@ -117,6 +145,9 @@ $(document).ready(function(){
     var name = form.find('input[type=text]').val();
     var phone = form.find('input[type=tel]').val();
     var email = form.find('input[type=email]').val();
+    var agreed = form.find('input[type=radio]:checked').val();
+
+    console.log(agreed);
 
     // validation
     var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -130,6 +161,12 @@ $(document).ready(function(){
       emailIsNotValid = true;
     }
 
+    if(agreed != 'yes'){
+        console.log('not agreed');
+        form.find('input[type=radio]').parent().addClass('ui-radio--error');
+    } else {
+        form.find('input[type=radio]').parent().removeClass('ui-radio--error');
+    }
     if(emailIsNotValid){
         form.find('input[type=email]').parent().addClass('ui-input--error');
     } else {
@@ -146,7 +183,7 @@ $(document).ready(function(){
         form.find('input[type=tel]').parent().removeClass('ui-input--error');
     }
 
-    if(emailIsNotValid || name == '' || name.length <= 3 || phone == '' || phone.length <= 10 ) {
+    if(agreed == '' || emailIsNotValid || name == '' || name.length <= 3 || phone == '' || phone.length <= 10 ) {
       // form.find('.form-validation').text('Исправьте ошибки в полях');
       return false;
       e.stopPropagation();
@@ -168,6 +205,7 @@ $(document).ready(function(){
         alert(data);
         if ( data.success) {
           form.find('.form__wrapper').fadeOut();
+          form.find('.form__thanks').fadeIn();
           setTimeout(function() {
             form.find('.form__thanks').html(data.message);
           }, 1000);
@@ -175,6 +213,7 @@ $(document).ready(function(){
       }).fail(function(data) {
         // remove
         form.find('.form__wrapper').fadeOut();
+        form.find('.form__thanks').fadeIn();
         setTimeout(function() {
           form.find('.form__thanks').html('<span>Thank you!</span> <br> We got your contact');
         }, 1000);
@@ -219,9 +258,16 @@ $(document).ready(function(){
 
   $(window).scrolled(30, function() {
     var wScroll = $(this).scrollTop() + 50;
-    $('.form--fixed').css(
-      'transform', 'translate3d(0,'+ wScroll + 'px,0)'
-    );
+    var wWidth = $(window).width();
+    if (wWidth > 900){
+      $('.form--fixed').css(
+        'transform', 'translate3d(0,'+ wScroll + 'px,0)'
+      );
+    } else {
+      $('.form--fixed').css(
+        'transform', 'translate3d(0,'+ 0 + 'px,0)'
+      );
+    }
     // if(wScroll + $(window).height() < $(document).height() - 100) {
     //   $('.form--fixed').css(
     //     'transform', 'translate3d(0,'+ wScroll + 'px,0)'

@@ -108,11 +108,12 @@
           <div class="container">
             <form class="form form--fixed" action="#" id="ctaFromSecond">
               <div class="form__title form__title--bg">Passa oggi a UALA <br> ottieni subito 12 mesi gratis!</div>
+              <div id="closeModal"></div>
               <div class="form__caption">
                 <div class="form__caption__tel">Chiamaci al <span>+39 02 80.88.76.12</span></div>
                 <div class="form__caption__desc">o scrivici, è gratuito e senza impegno.</div>
               </div>
-              <div class="form__thanks"> </div>
+              <div class="form__thanks"></div>
               <div class="form__wrapper form__wrapper--auto">
                 <div class="ui-input">
                   <label>La tua email</label>
@@ -127,7 +128,7 @@
                   <input type="text">
                 </div>
                 <div class="ui-radio">
-                  <input type="radio" name="agree" id="agree">
+                  <input type="radio" name="agree" id="agree" value="yes">
                   <label for="agree">Accetto <a href='#'>la Informativa sulla Privacy</a></label>
                 </div>
                 <div class="text-right">
@@ -143,9 +144,7 @@
             <div class="row">
               <div class="col col--half"><i class="ico ico-logo"></i>
                 <div class="hero__title">Ecco come abbiamo migliorato Exagon</div>
-              </div>
-              <div class="col col--half">
-                <!-- empty col-->
+                <div class="text-center visible-900"><a class="btn btn--primary" href="#modalForm">Show me form</a></div>
               </div>
             </div>
           </div>
@@ -155,6 +154,7 @@
           <div class="container">
             <div class="row">
               <div class="col col--half">
+                <!-- section-->
                 <div class="content__section">
                   <div class="content__section__head">
                     <div class="content__section__num">01</div><span>Lorem ispum dolor sit amet</span>
@@ -165,16 +165,18 @@
                     <div class="content__important__wrapper"><span>Passa a UALA FULL.</span> Entro il 31/1 rottami il tuo e ricevi il gestionale GRATIS 12 mesi. Nessun costo di attivazione.</div>
                   </div>
                 </div>
+                <!-- section-->
                 <div class="content__section">
                   <div class="content__section__head">
                     <div class="content__section__num">02</div><span>Lorem ispum dolor sit amet</span>
                   </div>
                   <div class="video"><img src="https://placehold.it/576x370"><i class="ico ico-play"></i></div>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <div class="content__important">
+                  <div class="content__important"><img src="images/svg/imp_block.svg">
                     <div class="content__important__wrapper"><span>Passa a UALA FULL.</span> Entro il 31/1 rottami il tuo e ricevi il gestionale GRATIS 12 mesi. Nessun costo di attivazione.</div>
                   </div>
                 </div>
+                <!-- section-->
                 <div class="content__section">
                   <div class="content__section__head">
                     <div class="content__section__num">03</div><span>Lorem ispum dolor sit amet</span>
@@ -183,8 +185,8 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                   <div class="content__contact"><span>Hai bisogno di più informazioni?</span> Chiamaci al +39 02 80.88.76.12</div>
                 </div>
+                <div class="text-center visible-900 mb80"><a class="btn btn--primary" href="#modalForm">Show me form</a></div>
               </div>
-              <div class="col col--half"></div>
             </div>
           </div>
         </div>

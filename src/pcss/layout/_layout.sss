@@ -54,6 +54,9 @@ body, html
   flex-direction: column
   transition: transform .6s ease-out
 
+.blur
+  filter: blur(4px)
+
 .section
   transform: translate3d(0,0,0)
   transition: all .5s ease
@@ -71,6 +74,13 @@ body, html
   bottom: 0
   .container
     height: 100%
+  @media(width <= 900px)
+    display: none
+    background: color(black a(50%))
+    z-index: 99
+    .container
+      height: 100vh
+
 
 .container
   width: 100%
@@ -105,3 +115,14 @@ body, html
 
 .text-right
   text-align: right
+
+.text-center
+  text-align: center
+
+.mb80
+  margin-bottom: 80px
+
+.visible-900
+  display: none
+  @media(width <= 900px)
+    display: block

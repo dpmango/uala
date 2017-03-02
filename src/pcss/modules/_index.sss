@@ -116,6 +116,7 @@
     padding-top: 20px
     margin-bottom: 0px
     border-top: 1px solid $borderColor
+    display: none
     span
       display: inline-block
       font-weight: 600
@@ -129,6 +130,13 @@
   .form
     width: 475px
     margin-right: auto
+    &--fixed
+      position: fixed
+      left: 50%
+      right: auto
+      top: 50%
+      transform: translate3d(-50%,-50%,0) !important
+
 @media($mobile)
   .form
     width: 100%
@@ -141,6 +149,45 @@
       padding: 30px 20px 20px 20px
     &__wrapper
       margin-top: 20px
+    &--fixed
+      width: calc(100% - 30px)
+@media(height <= 650px)
+  .form
+    &__wrapper
+      &--auto
+        .ui-input
+          margin-bottom: 20px
+        .ui-radio
+          margin-top: 0
+@media(height <= 570px)
+  .form
+    margin-top: -30px
+    &__title--bg
+      padding-top: 25px
+      padding-bottom: 20px
+    &__caption
+      padding-top: 15px
+      padding-bottom: 10px
+    &__wrapper
+      margin-top: 20px
+
+#closeModal
+  display: none
+  position: absolute
+  top: 10px
+  right: 10px
+  content: ' '
+  display: block
+  background: svg-load('../../images/svg/close.svg')
+  size: 30px
+  cursor: pointer
+  transition: all .4s ease
+  &:hover
+    transform: scale(1.1)
+    opacity: .7
+  @media(width <= 900px)
+    display: block
+
 
 .caption
   background: white
@@ -251,11 +298,9 @@
 // CONTENT
 .content
   margin-top: 50px
-
   p
     color: #40454C
     line-height: 26px
-
   &__important
     margin-top: 45px
     border: none
@@ -276,7 +321,6 @@
     span
       font-weight: 800
       color: $colorPrimary
-
 
   &__contact
     margin-top: 40px
@@ -313,6 +357,20 @@
       z-index: 1
       transform: translateY(-50%)
 
+@media($desktop)
+  .content
+    &__important
+      img
+        display: none
+      border: 1px solid $colorPrimary
+      border-radius: 8px
+
+@media(width <= 900px)
+  .content
+    .col
+      flex: 0 0 576px
+      margin-left: auto
+      margin-right: auto
 
 .video
   height: 370px
