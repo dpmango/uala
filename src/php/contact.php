@@ -29,6 +29,7 @@ $data           = array();      // array to pass back data
         return str_replace($bad,"",$string);
       }
 
+      $email_message .= "Select: ".clean_string($_POST['select'])."\n";
       $email_message .= "Name: ".clean_string($_POST['name'])."\n";
       $email_message .= "Phone: ".clean_string($_POST['phone'])."\n";
       $email_message .= "Email: ".clean_string($_POST['email'])."\n";

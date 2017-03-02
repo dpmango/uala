@@ -108,7 +108,10 @@ $(document).ready(function(){
       $('.app').css('max-height', $('#secondPage').height() + $('#firstPage').height() );
     }
   }
-  setBodyHeight('first'); // default is the first screen
+  setTimeout(function() {
+    setBodyHeight('first'); // default is the first screen
+  }, 1000);
+
 
   function setAppPosition(){
     var appNegativeMargin = 0 - $('#firstPage').height();
@@ -128,7 +131,14 @@ $(document).ready(function(){
       setBodyHeight('first');
     }
   });
-
+  $(window).scrolled(100, function() {
+    if (secondStepActive){
+      setBodyHeight('sec');
+      setAppPosition();
+    } else {
+      setBodyHeight('first');
+    }
+  });
   ///////////////
   /// FORMS LOGIC
   ///////////////
@@ -140,7 +150,10 @@ $(document).ready(function(){
     if(selectedOption != '' ){
       $('.ui-select').removeClass('ui-select--error');
       setBodyHeight('second');
-      setAppPosition();
+      setTimeout(function() {
+        setAppPosition();
+      }, 300);
+
       $('.fixed-btn').addClass('visible');
       $('#pasteSelected').text(selectedOption);
       return false;
@@ -151,7 +164,6 @@ $(document).ready(function(){
   });
 
   $('#ctaFromSecond').on('submit', function(e){
-    console.log('started submission');
     var form = $('#ctaFromSecond');
     var name = form.find('input[type=text]').val();
     var phone = form.find('input[type=tel]').val();
@@ -203,7 +215,8 @@ $(document).ready(function(){
       var formData = {
         'name' : name,
         'email' : email,
-        'phone' : phone
+        'phone' : phone,
+        'select' : selectedOption
       };
       // and make ajax call to phpmail
       $.ajax({
@@ -217,9 +230,7 @@ $(document).ready(function(){
         if ( data.success) {
           form.find('.form__wrapper').fadeOut();
           form.find('.form__thanks').fadeIn();
-          setTimeout(function() {
-            form.find('.form__thanks').html(data.message);
-          }, 1000);
+
         }
       }).fail(function(data) {
         // remove
@@ -282,11 +293,6 @@ $(document).ready(function(){
         'transform', 'translate3d(0,'+ 0 + 'px,0)'
       );
     }
-    // if(wScroll + $(window).height() < $(document).height() - 100) {
-    //   $('.form--fixed').css(
-    //     'transform', 'translate3d(0,'+ wScroll + 'px,0)'
-    //   );
-    // }
   });
 
 });
