@@ -70,25 +70,26 @@ $(document).ready(function(){
     $('.fixed-container').fadeIn();
     $('.hero, .content, .footer').addClass('blur');
     $('body, html').animate({scrollTop: $('.form--fixed').offset().top - 30}, 1000);
-
+    $('.fixed-btn').removeClass('visible');
   });
 
   $('#closeModal').on('click', function(){
     $('.fixed-container').fadeOut();
     $('.hero, .content, .footer').removeClass('blur');
+    $('.fixed-btn').addClass('visible');
   });
-
-  $(document).mouseup(function (e) {
-    var container = new Array();
-    container.push($('.form--fixed'));
-
-    $.each(container, function(key, value) {
-        if (!$(value).is(e.target) && $(value).has(e.target).length === 0) {
-            $('.fixed-container').fadeOut();
-            $('.hero, .content, .footer').removeClass('blur');
-        }
-    });
-  });
+  //
+  // $(document).mouseup(function (e) {
+  //   var container = new Array();
+  //   container.push($('.form--fixed'));
+  //
+  //   $.each(container, function(key, value) {
+  //       if (!$(value).is(e.target) && $(value).has(e.target).length === 0) {
+  //           $('.fixed-container').fadeOut();
+  //           $('.hero, .content, .footer').removeClass('blur');
+  //       }
+  //   });
+  // });
 
   $('#owlTestimonials').slick({
     dots: true,
@@ -136,6 +137,7 @@ $(document).ready(function(){
     e.preventDefault();
     setBodyHeight('second');
     setAppPosition();
+    $('.fixed-btn').addClass('visible');
     return false;
   });
 

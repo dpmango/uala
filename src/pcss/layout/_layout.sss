@@ -74,11 +74,12 @@ body, html
   bottom: 0
   .container
     height: 100%
-  @media(width <= 900px)
+@media(width <= 900px)
+  .fixed-container
     display: none
     background: color(black a(50%))
     z-index: 99
-    .container
+    > .container
       height: 100vh
 
 

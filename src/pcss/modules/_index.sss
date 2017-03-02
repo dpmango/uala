@@ -476,7 +476,30 @@
   .footer
     &__navi
       padding-top: 15px
+      flex: 1 1 100%
+      text-align: center
       a
         &:first-child
           &::before
             display: none
+
+.fixed-btn
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  padding: 15px 20px
+  background: $colorYellow
+  transform: translate3d(0, 120px, 0)
+  transition: transform .5s ease-in 2s
+  &.visible
+    @media(width <= 568px)
+      transform: translate3d(0, 0px, 0)
+  .btn--primary
+    padding-top: 15px
+    padding-bottom: 15px
+    background: #27282d
+    border-radius: 4px
+    color: white
+    &:hover
+      transform: none
