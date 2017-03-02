@@ -1,4 +1,4 @@
-// Bbtter scroll handler
+// Better scroll handler
 
 (function($) {
   var uniqueCntr = 0;
@@ -23,6 +23,33 @@
   }
 })(jQuery);
 
+// Better resize handler
+(function($) {
+  var uniqueCntr = 0;
+  $.fn.resized = function (waitTime, fn) {
+    if (typeof waitTime === "function") {
+        fn = waitTime;
+        waitTime = 100;
+    }
+    var tag = "scrollTimer" + uniqueCntr++;
+    this.resize(function () {
+        var self = $(this);
+        var timer = self.data(tag);
+        if (timer) {
+            clearTimeout(timer);
+        }
+        timer = setTimeout(function () {
+            self.removeData(tag);
+            fn.call(self[0]);
+        }, waitTime);
+        self.data(tag, timer);
+    });
+  }
+})(jQuery);
+
+///////////////////
+// Onload functions
+///////////////////
 $(document).ready(function(){
 
  	// Prevent # errors
@@ -45,8 +72,8 @@ $(document).ready(function(){
     arrows: false
   });
 
-  // FORM
-  var secondStepReady = false;
+  // SET THE HEIGHT OF VIEWPORT
+  var secondStepActive = false;
 
   function setBodyHeight(arg){
     if (arg == 'first'){
@@ -56,16 +83,30 @@ $(document).ready(function(){
     }
   }
 
-  setBodyHeight('first');
+  setBodyHeight('first'); // default is the first screen
 
+  // recalculate height with .1s delay
+  $(window).resized(function() {
+    if (secondStepActive){
+      setBodyHeight('sec');
+    } else {
+      setBodyHeight('first');
+    }
+  });
+
+  ///////////////
+  /// FORMS LOGIC
+  ///////////////
 
   $('#ctaFromFirst').on('submit', function(e){
     e.preventDefault();
     setBodyHeight('second');
     // $('.app').addClass('show-next');
+    var appNegativeMargin = 0 - $('#firstPage').height();
     $('.app').css(
       'transform', 'translate3d(0,-'+ $('#firstPage').height() + 'px,0)'
-    );
+    ).css('margin-bottom', appNegativeMargin);
+    secondStepActive = true;
     // $('#secondPage').addClass('active');
     return false;
   });
@@ -126,12 +167,17 @@ $(document).ready(function(){
       }).done(function(data) {
         alert(data);
         if ( data.success) {
-          form.find('.form-group').fadeOut();
-          form.find('.form-validation').fadeOut();
-          form.find('.form-success').html(data.message);
+          form.find('.form__wrapper').fadeOut();
+          setTimeout(function() {
+            form.find('.form__thanks').html(data.message);
+          }, 1000);
         }
       }).fail(function(data) {
-        alert(data);
+        // remove
+        form.find('.form__wrapper').fadeOut();
+        setTimeout(function() {
+          form.find('.form__thanks').html('<span>Thank you!</span> <br> We got your contact');
+        }, 1000);
         console.log(data);
       });
     }
@@ -140,8 +186,9 @@ $(document).ready(function(){
   });
 
 
-
+  //////
   // UI
+  /////
   $('.ui-select').on('click', function(e){
     $(this).toggleClass('active');
   });

@@ -1,7 +1,7 @@
 /* 1. Layout */
 /* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800');
 /* LAYOUT */
 /* variables */
 * {
@@ -24,6 +24,7 @@ ul li {
 body, html {
     position: relative;
     overflow-x: hidden;
+    min-width: 320px;
     max-width: 100%;
     background: white;
     color: #27282D;
@@ -83,7 +84,7 @@ body, html {
     margin-left: auto;
     padding-right: 20px;
     padding-left: 20px;
-    max-width: 1170px;
+    max-width: 1210px;
     width: 100%;
 }
 .row {
@@ -163,22 +164,34 @@ body, html {
 .ico-fb {
     width: 7px;
     height: 16px;
-    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='7px' height='16px' viewBox='0 0 7 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-fb%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='Passa-a-Uala---01' transform='translate(-815.000000, -871.000000)' fill='%23939999'%3E %3Cg id='Footer' transform='translate(0.000000, 799.000000)'%3E %3Cg id='Group-2' transform='translate(345.000000, 68.000000)'%3E %3Cpath d='M474.569,9.24 L474.573,7.86 C474.573,7.142 474.636,6.756 475.587,6.756 L476.857,6.756 L476.857,4 L474.824,4 C472.382,4 471.523,5.338 471.523,7.585 L471.523,9.24 L470,9.24 L470,11.997 L471.523,11.997 L471.523,19.994 L474.569,19.994 L474.569,11.997 L476.602,11.997 L476.871,9.24 L474.569,9.24 Z' id='ico-fb'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='7px' height='16px' viewBox='0 0 7 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%23939999'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-fb%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill-rule='evenodd'%3E %3Cg id='Passa-a-Uala---01' transform='translate(-815.000000, -871.000000)'%3E %3Cg id='Footer' transform='translate(0.000000, 799.000000)'%3E %3Cg id='Group-2' transform='translate(345.000000, 68.000000)'%3E %3Cpath d='M474.569,9.24 L474.573,7.86 C474.573,7.142 474.636,6.756 475.587,6.756 L476.857,6.756 L476.857,4 L474.824,4 C472.382,4 471.523,5.338 471.523,7.585 L471.523,9.24 L470,9.24 L470,11.997 L471.523,11.997 L471.523,19.994 L474.569,19.994 L474.569,11.997 L476.602,11.997 L476.871,9.24 L474.569,9.24 Z' id='ico-fb'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
+.ico-fb:hover {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='7px' height='16px' viewBox='0 0 7 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%2384CFB1'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-fb%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill-rule='evenodd'%3E %3Cg id='Passa-a-Uala---01' transform='translate(-815.000000, -871.000000)'%3E %3Cg id='Footer' transform='translate(0.000000, 799.000000)'%3E %3Cg id='Group-2' transform='translate(345.000000, 68.000000)'%3E %3Cpath d='M474.569,9.24 L474.573,7.86 C474.573,7.142 474.636,6.756 475.587,6.756 L476.857,6.756 L476.857,4 L474.824,4 C472.382,4 471.523,5.338 471.523,7.585 L471.523,9.24 L470,9.24 L470,11.997 L471.523,11.997 L471.523,19.994 L474.569,19.994 L474.569,11.997 L476.602,11.997 L476.871,9.24 L474.569,9.24 Z' id='ico-fb'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 }
 .ico-tw {
     width: 16px;
     height: 12px;
-    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='16px' height='13px' viewBox='0 0 16 13' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-twitter%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='Passa-a-Uala---01' transform='translate(-844.000000, -873.000000)' fill='%23939999'%3E %3Cg id='Footer' transform='translate(0.000000, 799.000000)'%3E %3Cg id='Group-2' transform='translate(345.000000, 68.000000)'%3E %3Cpath d='M515.001,7.489 C514.412,7.742 513.78,7.912 513.115,7.99 C513.793,7.596 514.314,6.974 514.559,6.233 C513.924,6.596 513.222,6.861 512.474,7.003 C511.876,6.386 511.022,6 510.078,6 C508.265,6 506.796,7.422 506.796,9.175 C506.796,9.424 506.824,9.667 506.881,9.899 C504.152,9.766 501.733,8.503 500.114,6.582 C499.832,7.051 499.67,7.596 499.67,8.178 C499.67,9.279 500.249,10.251 501.13,10.82 C500.592,10.804 500.086,10.661 499.644,10.423 C499.643,10.436 499.643,10.449 499.643,10.463 C499.643,12.001 500.774,13.285 502.276,13.576 C502.001,13.649 501.711,13.688 501.412,13.688 C501.2,13.688 500.994,13.668 500.794,13.631 C501.212,14.892 502.424,15.81 503.86,15.835 C502.737,16.687 501.322,17.195 499.783,17.195 C499.518,17.195 499.257,17.18 499,17.15 C500.453,18.05 502.179,18.577 504.033,18.577 C510.07,18.577 513.372,13.739 513.372,9.544 C513.372,9.406 513.369,9.269 513.363,9.133 C514.004,8.685 514.561,8.126 515.001,7.489' id='ico-twitter'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='16px' height='13px' viewBox='0 0 16 13' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%23939999'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-twitter%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill-rule='evenodd'%3E %3Cg id='Passa-a-Uala---01' transform='translate(-844.000000, -873.000000)'%3E %3Cg id='Footer' transform='translate(0.000000, 799.000000)'%3E %3Cg id='Group-2' transform='translate(345.000000, 68.000000)'%3E %3Cpath d='M515.001,7.489 C514.412,7.742 513.78,7.912 513.115,7.99 C513.793,7.596 514.314,6.974 514.559,6.233 C513.924,6.596 513.222,6.861 512.474,7.003 C511.876,6.386 511.022,6 510.078,6 C508.265,6 506.796,7.422 506.796,9.175 C506.796,9.424 506.824,9.667 506.881,9.899 C504.152,9.766 501.733,8.503 500.114,6.582 C499.832,7.051 499.67,7.596 499.67,8.178 C499.67,9.279 500.249,10.251 501.13,10.82 C500.592,10.804 500.086,10.661 499.644,10.423 C499.643,10.436 499.643,10.449 499.643,10.463 C499.643,12.001 500.774,13.285 502.276,13.576 C502.001,13.649 501.711,13.688 501.412,13.688 C501.2,13.688 500.994,13.668 500.794,13.631 C501.212,14.892 502.424,15.81 503.86,15.835 C502.737,16.687 501.322,17.195 499.783,17.195 C499.518,17.195 499.257,17.18 499,17.15 C500.453,18.05 502.179,18.577 504.033,18.577 C510.07,18.577 513.372,13.739 513.372,9.544 C513.372,9.406 513.369,9.269 513.363,9.133 C514.004,8.685 514.561,8.126 515.001,7.489' id='ico-twitter'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
+.ico-tw:hover {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='16px' height='13px' viewBox='0 0 16 13' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%2384CFB1'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-twitter%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill-rule='evenodd'%3E %3Cg id='Passa-a-Uala---01' transform='translate(-844.000000, -873.000000)'%3E %3Cg id='Footer' transform='translate(0.000000, 799.000000)'%3E %3Cg id='Group-2' transform='translate(345.000000, 68.000000)'%3E %3Cpath d='M515.001,7.489 C514.412,7.742 513.78,7.912 513.115,7.99 C513.793,7.596 514.314,6.974 514.559,6.233 C513.924,6.596 513.222,6.861 512.474,7.003 C511.876,6.386 511.022,6 510.078,6 C508.265,6 506.796,7.422 506.796,9.175 C506.796,9.424 506.824,9.667 506.881,9.899 C504.152,9.766 501.733,8.503 500.114,6.582 C499.832,7.051 499.67,7.596 499.67,8.178 C499.67,9.279 500.249,10.251 501.13,10.82 C500.592,10.804 500.086,10.661 499.644,10.423 C499.643,10.436 499.643,10.449 499.643,10.463 C499.643,12.001 500.774,13.285 502.276,13.576 C502.001,13.649 501.711,13.688 501.412,13.688 C501.2,13.688 500.994,13.668 500.794,13.631 C501.212,14.892 502.424,15.81 503.86,15.835 C502.737,16.687 501.322,17.195 499.783,17.195 C499.518,17.195 499.257,17.18 499,17.15 C500.453,18.05 502.179,18.577 504.033,18.577 C510.07,18.577 513.372,13.739 513.372,9.544 C513.372,9.406 513.369,9.269 513.363,9.133 C514.004,8.685 514.561,8.126 515.001,7.489' id='ico-twitter'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 }
 .ico-google {
     width: 16px;
     height: 15px;
-    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='16px' height='15px' viewBox='0 0 16 15' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-google%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='Passa-a-Uala---01' transform='translate(-883.000000, -872.000000)' fill='%23939999'%3E %3Cg id='Footer' transform='translate(0.000000, 799.000000)'%3E %3Cg id='Group-2' transform='translate(345.000000, 68.000000)'%3E %3Cpath d='M554,8.672 L551.539,8.672 L551.541,10.898 L550.8,10.875 L550.8,8.672 L548.338,8.672 L548.338,7.938 L550.8,7.938 L550.8,5.489 L551.541,5.489 L551.539,7.938 L554,7.938 L554,8.672 L554,8.672 Z M545.816,13.595 L545.817,13.597 C547.064,14.461 547.467,15.263 547.467,16.602 C547.467,18.272 545.817,19.934 542.83,19.934 C540.21,19.934 538,18.889 538,17.218 C538,15.522 540.016,13.887 542.636,13.887 C542.921,13.887 543.183,13.879 543.454,13.879 C543.095,13.538 542.812,13.118 542.812,12.602 C542.812,12.295 542.911,11.999 543.051,11.738 C542.909,11.747 542.763,11.75 542.614,11.75 C540.462,11.75 539.02,10.249 539.02,8.39 C539.02,6.57 541.011,5 543.126,5 C544.306,5 547.406,5.489 547.406,5.489 L546.788,5.748 L545.292,5.748 C546.284,6.122 546.813,7.256 546.813,8.42 C546.813,9.397 546.261,10.237 545.48,10.835 C544.719,11.417 544.575,11.661 544.575,12.157 C544.575,12.58 545.39,13.298 545.816,13.595 L545.816,13.595 Z M545.116,8.51 C544.906,6.945 543.751,5.689 542.535,5.654 C541.32,5.618 540.505,6.815 540.715,8.381 C540.925,9.945 542.08,11.242 543.296,11.278 C544.51,11.313 545.325,10.074 545.116,8.51 L545.116,8.51 Z M544.308,14.499 C543.951,14.386 543.557,14.319 543.134,14.315 C541.323,14.296 539.701,15.398 539.701,16.72 C539.701,18.07 541.009,19.193 542.82,19.193 C545.366,19.193 546.253,18.138 546.253,16.789 C546.253,16.627 546.232,16.468 546.195,16.312 C545.997,15.548 545.291,15.17 544.308,14.499 L544.308,14.499 Z' id='ico-google'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='16px' height='15px' viewBox='0 0 16 15' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%23939999'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-google%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill-rule='evenodd'%3E %3Cg id='Passa-a-Uala---01' transform='translate(-883.000000, -872.000000)'%3E %3Cg id='Footer' transform='translate(0.000000, 799.000000)'%3E %3Cg id='Group-2' transform='translate(345.000000, 68.000000)'%3E %3Cpath d='M554,8.672 L551.539,8.672 L551.541,10.898 L550.8,10.875 L550.8,8.672 L548.338,8.672 L548.338,7.938 L550.8,7.938 L550.8,5.489 L551.541,5.489 L551.539,7.938 L554,7.938 L554,8.672 L554,8.672 Z M545.816,13.595 L545.817,13.597 C547.064,14.461 547.467,15.263 547.467,16.602 C547.467,18.272 545.817,19.934 542.83,19.934 C540.21,19.934 538,18.889 538,17.218 C538,15.522 540.016,13.887 542.636,13.887 C542.921,13.887 543.183,13.879 543.454,13.879 C543.095,13.538 542.812,13.118 542.812,12.602 C542.812,12.295 542.911,11.999 543.051,11.738 C542.909,11.747 542.763,11.75 542.614,11.75 C540.462,11.75 539.02,10.249 539.02,8.39 C539.02,6.57 541.011,5 543.126,5 C544.306,5 547.406,5.489 547.406,5.489 L546.788,5.748 L545.292,5.748 C546.284,6.122 546.813,7.256 546.813,8.42 C546.813,9.397 546.261,10.237 545.48,10.835 C544.719,11.417 544.575,11.661 544.575,12.157 C544.575,12.58 545.39,13.298 545.816,13.595 L545.816,13.595 Z M545.116,8.51 C544.906,6.945 543.751,5.689 542.535,5.654 C541.32,5.618 540.505,6.815 540.715,8.381 C540.925,9.945 542.08,11.242 543.296,11.278 C544.51,11.313 545.325,10.074 545.116,8.51 L545.116,8.51 Z M544.308,14.499 C543.951,14.386 543.557,14.319 543.134,14.315 C541.323,14.296 539.701,15.398 539.701,16.72 C539.701,18.07 541.009,19.193 542.82,19.193 C545.366,19.193 546.253,18.138 546.253,16.789 C546.253,16.627 546.232,16.468 546.195,16.312 C545.997,15.548 545.291,15.17 544.308,14.499 L544.308,14.499 Z' id='ico-google'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
+.ico-google:hover {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='16px' height='15px' viewBox='0 0 16 15' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%2384CFB1'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-google%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill-rule='evenodd'%3E %3Cg id='Passa-a-Uala---01' transform='translate(-883.000000, -872.000000)'%3E %3Cg id='Footer' transform='translate(0.000000, 799.000000)'%3E %3Cg id='Group-2' transform='translate(345.000000, 68.000000)'%3E %3Cpath d='M554,8.672 L551.539,8.672 L551.541,10.898 L550.8,10.875 L550.8,8.672 L548.338,8.672 L548.338,7.938 L550.8,7.938 L550.8,5.489 L551.541,5.489 L551.539,7.938 L554,7.938 L554,8.672 L554,8.672 Z M545.816,13.595 L545.817,13.597 C547.064,14.461 547.467,15.263 547.467,16.602 C547.467,18.272 545.817,19.934 542.83,19.934 C540.21,19.934 538,18.889 538,17.218 C538,15.522 540.016,13.887 542.636,13.887 C542.921,13.887 543.183,13.879 543.454,13.879 C543.095,13.538 542.812,13.118 542.812,12.602 C542.812,12.295 542.911,11.999 543.051,11.738 C542.909,11.747 542.763,11.75 542.614,11.75 C540.462,11.75 539.02,10.249 539.02,8.39 C539.02,6.57 541.011,5 543.126,5 C544.306,5 547.406,5.489 547.406,5.489 L546.788,5.748 L545.292,5.748 C546.284,6.122 546.813,7.256 546.813,8.42 C546.813,9.397 546.261,10.237 545.48,10.835 C544.719,11.417 544.575,11.661 544.575,12.157 C544.575,12.58 545.39,13.298 545.816,13.595 L545.816,13.595 Z M545.116,8.51 C544.906,6.945 543.751,5.689 542.535,5.654 C541.32,5.618 540.505,6.815 540.715,8.381 C540.925,9.945 542.08,11.242 543.296,11.278 C544.51,11.313 545.325,10.074 545.116,8.51 L545.116,8.51 Z M544.308,14.499 C543.951,14.386 543.557,14.319 543.134,14.315 C541.323,14.296 539.701,15.398 539.701,16.72 C539.701,18.07 541.009,19.193 542.82,19.193 C545.366,19.193 546.253,18.138 546.253,16.789 C546.253,16.627 546.232,16.468 546.195,16.312 C545.997,15.548 545.291,15.17 544.308,14.499 L544.308,14.499 Z' id='ico-google'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 }
 .ico-insta {
     width: 14px;
     height: 14px;
-    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='14px' height='14px' viewBox='0 0 14 14' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-insta%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='Passa-a-Uala---01' transform='translate(-921.000000, -872.000000)' fill='%23939999'%3E %3Cg id='Footer' transform='translate(0.000000, 799.000000)'%3E %3Cg id='Group-2' transform='translate(345.000000, 68.000000)'%3E %3Cpath d='M588.388,16.363 C588.388,16.846 587.834,17.388 587.35,17.388 L578.6,17.388 C578.116,17.388 577.587,16.859 577.587,16.375 L577.587,12 C577.587,11.517 578.141,11 578.625,11 L579.624,11 C579.551,11.281 579.5,11.696 579.5,12 C579.5,13.933 581.067,15.5 583,15.5 C584.933,15.5 586.5,13.933 586.5,12 C586.5,11.696 586.448,11.294 586.376,11.013 L587.375,11.013 C587.859,11.013 588.388,11.504 588.388,11.988 L588.388,16.363 Z M583,10.25 C584.612,10.25 584.75,12 584.75,12 C584.75,12 584.802,13.75 583,13.75 C581.199,13.75 581.25,12 581.25,12 C581.25,12 581.388,10.25 583,10.25 L583,10.25 Z M585.625,7.625 C585.625,7.142 586.017,6.75 586.5,6.75 L587.375,6.75 C587.859,6.75 588.25,7.142 588.25,7.625 L588.25,8.5 C588.25,8.983 587.859,9.375 587.375,9.375 L586.5,9.375 C586.017,9.375 585.625,8.983 585.625,8.5 L585.625,7.625 Z M588.25,5 L577.75,5 C576.784,5 576,5.784 576,6.75 L576,17.25 C576,18.216 576.784,19 577.75,19 L588.25,19 C589.216,19 590,18.216 590,17.25 L590,6.75 C590,5.784 589.216,5 588.25,5 L588.25,5 Z' id='ico-insta'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='14px' height='14px' viewBox='0 0 14 14' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%23939999'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-insta%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill-rule='evenodd'%3E %3Cg id='Passa-a-Uala---01' transform='translate(-921.000000, -872.000000)'%3E %3Cg id='Footer' transform='translate(0.000000, 799.000000)'%3E %3Cg id='Group-2' transform='translate(345.000000, 68.000000)'%3E %3Cpath d='M588.388,16.363 C588.388,16.846 587.834,17.388 587.35,17.388 L578.6,17.388 C578.116,17.388 577.587,16.859 577.587,16.375 L577.587,12 C577.587,11.517 578.141,11 578.625,11 L579.624,11 C579.551,11.281 579.5,11.696 579.5,12 C579.5,13.933 581.067,15.5 583,15.5 C584.933,15.5 586.5,13.933 586.5,12 C586.5,11.696 586.448,11.294 586.376,11.013 L587.375,11.013 C587.859,11.013 588.388,11.504 588.388,11.988 L588.388,16.363 Z M583,10.25 C584.612,10.25 584.75,12 584.75,12 C584.75,12 584.802,13.75 583,13.75 C581.199,13.75 581.25,12 581.25,12 C581.25,12 581.388,10.25 583,10.25 L583,10.25 Z M585.625,7.625 C585.625,7.142 586.017,6.75 586.5,6.75 L587.375,6.75 C587.859,6.75 588.25,7.142 588.25,7.625 L588.25,8.5 C588.25,8.983 587.859,9.375 587.375,9.375 L586.5,9.375 C586.017,9.375 585.625,8.983 585.625,8.5 L585.625,7.625 Z M588.25,5 L577.75,5 C576.784,5 576,5.784 576,6.75 L576,17.25 C576,18.216 576.784,19 577.75,19 L588.25,19 C589.216,19 590,18.216 590,17.25 L590,6.75 C590,5.784 589.216,5 588.25,5 L588.25,5 Z' id='ico-insta'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
+.ico-insta:hover {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='14px' height='14px' viewBox='0 0 14 14' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%2384CFB1'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-insta%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill-rule='evenodd'%3E %3Cg id='Passa-a-Uala---01' transform='translate(-921.000000, -872.000000)'%3E %3Cg id='Footer' transform='translate(0.000000, 799.000000)'%3E %3Cg id='Group-2' transform='translate(345.000000, 68.000000)'%3E %3Cpath d='M588.388,16.363 C588.388,16.846 587.834,17.388 587.35,17.388 L578.6,17.388 C578.116,17.388 577.587,16.859 577.587,16.375 L577.587,12 C577.587,11.517 578.141,11 578.625,11 L579.624,11 C579.551,11.281 579.5,11.696 579.5,12 C579.5,13.933 581.067,15.5 583,15.5 C584.933,15.5 586.5,13.933 586.5,12 C586.5,11.696 586.448,11.294 586.376,11.013 L587.375,11.013 C587.859,11.013 588.388,11.504 588.388,11.988 L588.388,16.363 Z M583,10.25 C584.612,10.25 584.75,12 584.75,12 C584.75,12 584.802,13.75 583,13.75 C581.199,13.75 581.25,12 581.25,12 C581.25,12 581.388,10.25 583,10.25 L583,10.25 Z M585.625,7.625 C585.625,7.142 586.017,6.75 586.5,6.75 L587.375,6.75 C587.859,6.75 588.25,7.142 588.25,7.625 L588.25,8.5 C588.25,8.983 587.859,9.375 587.375,9.375 L586.5,9.375 C586.017,9.375 585.625,8.983 585.625,8.5 L585.625,7.625 Z M588.25,5 L577.75,5 C576.784,5 576,5.784 576,6.75 L576,17.25 C576,18.216 576.784,19 577.75,19 L588.25,19 C589.216,19 590,18.216 590,17.25 L590,6.75 C590,5.784 589.216,5 588.25,5 L588.25,5 Z' id='ico-insta'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 }
 /* BENEFIT ICON */
 .ico-benefit-save {
@@ -224,12 +237,14 @@ body, html {
     outline: none;
 }
 .btn--primary {
-    padding: 15px 30px;
+    padding: 20px 25px;
     min-width: 280px;
     border: 2px solid transparent;
     border-radius: 30px;
     background: #F8F398;
     color: #27282D;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
     letter-spacing: 1.2px;
     font-weight: 600;
     font-size: 14px;
@@ -241,6 +256,16 @@ body, html {
     -webkit-transform: translate3d(0, -3px, 0);
             transform: translate3d(0, -3px, 0);
 }
+@media(max-width: 568px) {
+    .btn {}
+    .btn--primary {
+        display: block;
+        padding-right: 15px;
+        padding-left: 15px;
+        min-width: 1px;
+        width: auto;
+    }
+}
 
 /* 3. Modules */
 /* INDEX */
@@ -250,6 +275,9 @@ body, html {
     background: -webkit-linear-gradient(315deg, #86CED0, #7EC6AA);
     background: linear-gradient(135deg, #86CED0, #7EC6AA);
     color: white;
+}
+.hero .ico {
+    margin-top: 20px;
 }
 .hero--short {
     height: 390px;
@@ -262,9 +290,54 @@ body, html {
     font-family: 'Montserrat';
     line-height: 58px;
 }
-@media(max-width: 568px) {
+@media(max-width: 992px) {
+    .hero {}
+    .hero__title {
+        font-size: 40px;
+        line-height: 48px;
+    }
+}
+@media(max-width: 900px) {
     .hero {
+        padding-top: 30px;
+        padding-bottom: 40px;
         height: auto;
+    }
+    .hero .row {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+    }
+    .hero .col {
+        -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+        width: 100%;
+        -webkit-box-flex: 1;
+    }
+    .hero .ico {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+    }
+    .hero__title {
+        margin-top: 60px;
+        margin-right: auto;
+        margin-bottom: 30px;
+        margin-left: auto;
+        width: 475px;
+        text-align: center;
+    }
+}
+@media(max-width: 568px) {
+    .hero {}
+    .hero__title {
+        width: auto;
+        font-size: 36px;
+        line-height: 46px;
     }
 }
 /* FORM */
@@ -280,11 +353,13 @@ body, html {
     color: #27282D;
 }
 .form__title {
-    padding: 35px 33px;
+    padding: 40px 33px 35px 33px;
     font-weight: 600;
     font-size: 20px;
 }
 .form__title--bg {
+    padding-top: 30px;
+    padding-bottom: 30px;
     background: #F1F7F7;
     font-weight: 700;
     font-family: 'Montserrat';
@@ -322,22 +397,71 @@ body, html {
 .form__wrapper .btn--primary {
     margin-left: auto;
 }
+.form__wrapper--auto {
+    margin-top: 30px;
+}
 .form__wrapper--auto .ui-input {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 .form__wrapper--auto .btn--primary {
     margin-top: 30px;
     min-width: 1px;
     width: auto;
 }
-@media(max-width: 1000px) {
+.form__caption {
+    padding: 30px 33px 0px 33px;
+}
+.form__caption__tel {
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.form__caption__tel span {
+    font-weight: 700;
+}
+.form__caption__desc {
+    margin-top: 5px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 21px;
+}
+.form__thanks {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    border-top: 1px solid #DDE4E4;
+    text-align: center;
+    font-size: 24px;
+}
+.form__thanks span {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+@media(max-width: 992px) {
     .form {
         width: 400px;
+    }
+}
+@media(max-width: 900px) {
+    .form {
+        margin-right: auto;
+        width: 475px;
     }
 }
 @media(max-width: 568px) {
     .form {
         width: 100%;
+    }
+}
+@media(max-width: 568px) {
+    .form {}
+    .form__title {
+        padding: 30px 20px 20px 20px;
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .form__wrapper {
+        margin-top: 20px;
     }
 }
 .caption {
@@ -353,6 +477,8 @@ body, html {
             flex-wrap: wrap;
     -webkit-justify-content: center;
             justify-content: center;
+    margin-bottom: 40px;
+    padding-top: 15px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
 }
@@ -362,14 +488,18 @@ body, html {
         -ms-flex: 1 1 50%;
             flex: 1 1 50%;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     -webkit-box-flex: 1;
 }
 .features__item .ico {
-    -webkit-flex: 0 0 33%;
-        -ms-flex: 0 0 33%;
-            flex: 0 0 33%;
+    -webkit-flex: 0 0 30%;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+    -webkit-align-self: flex-start;
+            align-self: flex-start;
+    margin-left: -10px;
     -webkit-box-flex: 0;
+        -ms-flex-item-align: start;
 }
 .features__item span {
     display: inline-block;
@@ -391,23 +521,55 @@ body, html {
     display: flex;
     -webkit-align-items: center;
             align-items: center;
-    -webkit-justify-content: center;
-            justify-content: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
     -webkit-box-align: center;
         -ms-flex-align: center;
 }
+@media(max-width: 900px) {
+    .features {
+        padding-top: 55px;
+    }
+    .features__item {
+        -webkit-flex: 1 1 100%;
+            -ms-flex: 1 1 100%;
+                flex: 1 1 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        -webkit-box-flex: 1;
+    }
+}
+@media(max-width: 768px) {
+    .features {}
+    .features__item .ico {
+        margin-left: -15px;
+        -webkit-transform: scale(.8);
+            -ms-transform: scale(.8);
+                transform: scale(.8);
+    }
+    .features__item span {
+        padding-left: 10px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
 .testimonials {
     margin-top: 50px;
+    margin-bottom: 45px;
+    padding-left: 16.6%;
 }
-/* padding-left: 16.6% */
 .testimonials .slick-dots {
     margin: 0;
     padding: 0;
 }
 .testimonials .slick-dots li {
+    display: inline-block;
     margin-right: 10px;
+}
+.testimonials .slick-dots li:focus {
+    outline: none;
 }
 .testimonials .slick-dots .slick-active button {
     width: 12px;
@@ -415,6 +577,7 @@ body, html {
     background: #84CFB1;
 }
 .testimonials .slick-dots button {
+    display: block;
     overflow: hidden;
     max-width: 8px;
     width: 8px;
@@ -422,6 +585,7 @@ body, html {
     border: none;
     border-radius: 50%;
     background: #DDE4E4;
+    content: ' ';
     font-size: 0;
     line-height: 0;
     cursor: pointer;
@@ -441,37 +605,65 @@ body, html {
     font-size: 18px;
     line-height: 26px;
 }
+@media(max-width: 768px) {
+    .testimonials {
+        padding-left: 20px;
+    }
+    .testimonials__content {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+@media(max-width: 568px) {
+    .testimonials {
+        padding-left: 0;
+    }
+}
 /* CONTENT */
 .content {
-    margin-top: 60px;
+    margin-top: 50px;
 }
 .content p {
     color: #40454C;
     line-height: 26px;
 }
 .content__important {
-    margin-top: 40px;
-    padding: 25px 30px;
-    border: 1px solid #84CFB1;
-    border-radius: 8px;
+    position: relative;
+    overflow: visible;
+    margin-top: 45px;
+    border: none;
     font-weight: 600;
     font-size: 20px;
 }
+.content__important img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
 .content__important span {
     color: #84CFB1;
-    font-weight: 900;
+    font-weight: 800;
+}
+.content__important__wrapper {
+    padding: 25px 40px 25px 30px;
+    line-height: 27px;
 }
 .content__contact {
     margin-top: 40px;
-    padding: 35px;
+    padding: 38px 35px;
     border-radius: 8px;
     background: #F1F7F7;
     text-align: center;
+    letter-spacing: 0px;
     font-size: 20px;
     line-height: 32px;
 }
 .content__contact span {
     display: block;
+    letter-spacing: .5px;
     font-weight: 600;
 }
 .content__section {
@@ -544,13 +736,13 @@ body, html {
 }
 /* FOOTER */
 .footer {
-    padding: 65px 0;
+    padding: 70px 0 60px 0;
     background: #F1F7F7;
     color: #939999;
     font-size: 12px;
 }
 .footer .ico-logo-gray {
-    margin-right: 15px;
+    margin-right: 20px;
 }
 .footer__wrapper {
     display: -webkit-box;
@@ -573,6 +765,11 @@ body, html {
 .footer__navi a {
     position: relative;
     display: inline-block;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+.footer__navi a:hover {
+    color: #84CFB1;
 }
 .footer__navi a:before, .footer__navi a:after {
     display: inline-block;
@@ -591,17 +788,60 @@ body, html {
     margin-left: 10px;
 }
 .footer__navi a:last-child {}
+.footer__navi a:last-child:after {
+    display: inline-block;
+    margin-left: 15px;
+}
 .footer__navi a:last-child:before {
     margin-left: 10px;
 }
 .footer__socials {
     margin-left: 15px;
 }
+.footer__socials .ico {
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
 .footer__socials a {
-    margin-right: 10px;
+    display: inline-block;
+    margin-right: 22px;
 }
 .footer__socials a:before, .footer__socials a:after {
     display: none;
+}
+@media(max-width: 768px) {
+    .footer {
+        padding: 50px 0 40px 0;
+    }
+    .footer__wrapper {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+    }
+    .footer__navi a {}
+    .footer__navi a:last-child {}
+    .footer__navi a:last-child:after {
+        display: none;
+    }
+    .footer__socials {
+        -webkit-flex: 1 1 100%;
+            -ms-flex: 1 1 100%;
+                flex: 1 1 100%;
+        margin-top: 30px;
+        text-align: center;
+        -webkit-box-flex: 1;
+    }
+}
+@media(max-width: 568px) {
+    .footer {}
+    .footer__navi {
+        padding-top: 15px;
+    }
+    .footer__navi a {}
+    .footer__navi a:first-child {}
+    .footer__navi a:first-child:before {
+        display: none;
+    }
 }
 /* UI */
 .ui-select {
@@ -615,6 +855,7 @@ body, html {
 }
 .ui-select label {
     color: #939999;
+    letter-spacing: 1px;
     cursor: pointer;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -625,7 +866,7 @@ body, html {
 .ui-select:after {
     position: absolute;
     top: 30px;
-    right: 0;
+    right: 0px;
     display: block;
     width: 10px;
     height: 6px;
@@ -642,6 +883,7 @@ body, html {
     position: absolute;
     top: 60px;
     left: 0;
+    z-index: 9;
     display: none;
     width: 100%;
     background: white;
@@ -672,8 +914,8 @@ body, html {
 }
 .ui-input label {
     position: absolute;
-    top: 13px;
-    left: 10px;
+    top: 5px;
+    left: 4px;
     color: #939999;
     letter-spacing: 1px;
     font-size: 16px;
@@ -711,6 +953,8 @@ body, html {
 /* RADIO */
 .ui-radio {
     position: relative;
+    margin-top: -30px;
+    font-size: 14px;
     cursor: pointer;
 }
 .ui-radio input {
@@ -724,7 +968,7 @@ body, html {
 }
 .ui-radio input + label {
     display: inline-block;
-    padding-left: 30px;
+    padding-left: 25px;
     color: #939999;
     letter-spacing: .45px;
     font-size: 14px;
@@ -741,7 +985,6 @@ body, html {
     display: inline-block;
     width: 16px;
     height: 16px;
-    border: 1px solid #DDE4E4;
     border-radius: 50%;
     background: #84CFB1;
     -webkit-box-shadow: inset 0px 0px 0 8px white, 0 0 0 1px #DDE4E4;

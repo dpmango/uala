@@ -13,10 +13,44 @@
     font-weight: 700
     letter-spacing: -.67px
     margin-top: 80px
+  .ico
+    margin-top: 20px
+
+@media($desktop)
+  .hero
+    &__title
+      font-size: 40px
+      line-height: 48px
+
+@media(width <= 900px)
+  .hero
+    height: auto
+    padding-top: 30px
+    padding-bottom: 40px
+    .row
+      flex-wrap: wrap
+    .col
+      flex: 1 1 auto
+      width: 100%
+    .ico
+      position: absolute
+      left: 50%
+      top: 0
+      transform: translateX(-50%)
+    &__title
+      text-align: center
+      margin-top: 60px
+      margin-bottom: 30px
+      width: 475px
+      margin-left: auto
+      margin-right: auto
 
 @media($mobile)
   .hero
-    height: auto
+    &__title
+      width: auto
+      font-size: 36px
+      line-height: 46px
 
 // FORM
 .form
@@ -31,11 +65,13 @@
   &__title
     font-size: 20px
     font-weight: 600
-    padding: 35px 33px
+    padding: 40px 33px 35px 33px
     &--bg
       background: #F1F7F7
       font-family: 'Montserrat'
       font-weight: 700
+      padding-top: 30px
+      padding-bottom: 30px
   &--fixed
     position: absolute
     transform: translate3d(0, 50px, 0)
@@ -53,19 +89,58 @@
     .btn--primary
       margin-left: auto
     &--auto
+      margin-top: 30px
       .ui-input
-        margin-bottom: 20px
+        margin-bottom: 50px
       .btn--primary
         min-width: 1px
         width: auto
         margin-top: 30px
+  &__caption
+    padding: 30px 33px 0px 33px
+    &__tel
+      font-size: 18px
+      letter-spacing: 1px
+      span
+        font-weight: 700
+    &__desc
+      margin-top: 5px
+      font-size: 14px
+      letter-spacing: 1px
+      line-height: 21px
+
+  &__thanks
+    text-align: center
+    font-size: 24px
+    margin-top: 20px
+    padding-top: 20px
+    margin-bottom: 0px
+    border-top: 1px solid $borderColor
+    span
+      display: inline-block
+      font-weight: 600
+      margin-bottom: 5px
 
 @media($desktop)
   .form
     width: 400px
+
+@media(width <= 900px)
+  .form
+    width: 475px
+    margin-right: auto
 @media($mobile)
   .form
     width: 100%
+
+@media($mobile)
+  .form
+    &__title
+      font-size: 18px
+      font-weight: 600
+      padding: 30px 20px 20px 20px
+    &__wrapper
+      margin-top: 20px
 
 .caption
   background: white
@@ -74,19 +149,23 @@
   display: flex
   flex-wrap: wrap
   justify-content: center
+  padding-top: 15px
+  margin-bottom: 40px
   &__item
     flex: 1 1 50%
     position: relative
     margin-top: 50px
-    margin-bottom: 50px
+    margin-bottom: 40px
     &__wrap
       display: -webkit-flex
       display: -ms-flex
       display: flex
-      justify-content: center
+      justify-content: space-between
       align-items: center
     .ico
-      flex: 0 0 33%
+      flex: 0 0 30%
+      align-self: flex-start
+      margin-left: -10px
     span
       flex: 1 1 auto
       display: inline-block
@@ -96,10 +175,30 @@
       line-height: 22px
       color: $mutedColor
 
+@media(width <= 900px)
+  .features
+    padding-top: 55px
+    &__item
+      flex: 1 1 100%
+      margin-top: 10px
+      margin-bottom: 10px
+
+@media($tablet)
+  .features
+    &__item
+      .ico
+        transform: scale(.8)
+        margin-left: -15px
+      span
+        font-size: 16px
+        line-height: 20px
+        padding-left: 10px
+
 
 .testimonials
   margin-top: 50px
-  // padding-left: 16.6%
+  padding-left: 16.6%
+  margin-bottom: 45px
   &__slide
     padding: 0
   &__content
@@ -112,14 +211,19 @@
     margin: 0
     padding: 0
     li
+      display: inline-block
       margin-right: 10px
+      &:focus
+        outline: none
 
     .slick-active
       button
         background: $colorPrimary
         size: 12px
     button
+      display: block
       background: #DDE4E4
+      content: ' '
       size: 8px
       max-width: 8px
       border-radius: 50%
@@ -133,25 +237,46 @@
       &:focus
         outline: none
 
+@media($tablet)
+  .testimonials
+    padding-left: 20px
+    &__content
+      font-size: 16px
+      line-height: 22px
+
+@media($mobile)
+  .testimonials
+    padding-left: 0
 
 // CONTENT
 .content
-  margin-top: 60px
+  margin-top: 50px
 
   p
     color: #40454C
     line-height: 26px
 
   &__important
-    margin-top: 40px
-    border: 1px solid $colorPrimary
-    border-radius: 8px
+    margin-top: 45px
+    border: none
     font-weight: 600
     font-size: 20px
-    padding: 25px 30px
+    position: relative
+    overflow: visible
+    img
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      width: 100%
+    &__wrapper
+      padding: 25px 40px 25px 30px
+      line-height: 27px
     span
-      font-weight: 900
+      font-weight: 800
       color: $colorPrimary
+
 
   &__contact
     margin-top: 40px
@@ -160,8 +285,10 @@
     background: #F1F7F7
     text-align: center
     border-radius: 8px
-    padding: 35px
+    padding: 38px 35px
+    letter-spacing: 0px
     span
+      letter-spacing: .5px
       display: block
       font-weight: 600
 
@@ -223,7 +350,7 @@
 // FOOTER
 .footer
   background: #F1F7F7
-  padding: 65px 0
+  padding: 70px 0 60px 0
   color: $mutedColor
   font-size: 12px
   &__wrapper
@@ -231,7 +358,7 @@
     justify-content: center
     align-items: center
   .ico-logo-gray
-    margin-right: 15px
+    margin-right: 20px
   &__copy
     color: $mutedColor
     margin-right: 12px
@@ -239,6 +366,10 @@
     a
       display: inline-block
       position: relative
+      transition: all .4s ease
+      &:hover
+        color: $colorPrimary
+
       &::before, &::after
         display: inline-block
         content: ' '
@@ -252,11 +383,42 @@
         display: none
         margin-left: 10px
       &:last-child
+        &::after
+          display: inline-block
+          margin-left: 15px
         &::before
           margin-left: 10px
+
   &__socials
     margin-left: 15px
+    .ico
+      transition: all .3s ease-in-out
     a
+      display: inline-block
       &::before, &::after
         display: none
-      margin-right: 10px
+      margin-right: 22px
+
+@media($tablet)
+  .footer
+    padding: 50px 0 40px 0
+    &__wrapper
+      flex-wrap: wrap
+    &__navi
+      a
+        &:last-child
+          &::after
+            display: none
+    &__socials
+      flex: 1 1 100%
+      margin-top: 30px
+      text-align: center
+
+@media($mobile)
+  .footer
+    &__navi
+      padding-top: 15px
+      a
+        &:first-child
+          &::before
+            display: none
