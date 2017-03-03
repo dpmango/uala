@@ -150,7 +150,9 @@ $(document).ready(function(){
     e.preventDefault();
     if(selectedOption != '' ){
       $('.ui-select').removeClass('ui-select--error');
-      setBodyHeight('second');
+      setTimeout(function() {
+        setBodyHeight('second');
+      }, 300);
       setTimeout(function() {
         setAppPosition();
       }, 300);

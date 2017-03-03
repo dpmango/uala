@@ -219,7 +219,6 @@
 /* LAYOUT */
 /* variables */
 * {
-    -webkit-overflow-scrolling: touch;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
