@@ -1206,26 +1206,15 @@ body, html {
             transform: translate3d(0, 50px, 0);
 }
 .form__wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-justify-content: space-between;
-            justify-content: space-between;
     margin-top: 40px;
     padding-right: 33px;
     padding-left: 33px;
-    min-height: 200px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
 }
 .form__wrapper .btn--primary {
     margin-left: auto;
+}
+.form__wrapper .ui-select {
+    margin-bottom: 80px;
 }
 .form__wrapper--auto {
     margin-top: 30px;
@@ -1301,6 +1290,9 @@ body, html {
     }
     .form__wrapper {
         margin-top: 20px;
+    }
+    .form__wrapper .ui-select {
+        margin-bottom: 50px;
     }
     .form--fixed {
         width: -webkit-calc(100% - 30px);

@@ -20,3 +20,6 @@ __Production__
 - `images` - imagemin for graphics optimization
 - `browserSync` - serve assets with hot reload from `./src` folder
 - `clean:dist` - clean dist folder to prevent conflicts before build
+
+
+gulp build && git add . && git commit -m "strange padding of 1st screen form" && git push

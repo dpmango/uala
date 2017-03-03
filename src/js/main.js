@@ -131,15 +131,15 @@ $(document).ready(function(){
       setBodyHeight('first');
     }
   });
-  $(window).scrolled(100, function() {
-    if (secondStepActive){
-      console.log('recalc');
-      setBodyHeight('sec');
-      setAppPosition();
-    } else {
-      setBodyHeight('first');
-    }
-  });
+  // $(window).scrolled(100, function() {
+  //   if (secondStepActive){
+  //     console.log('recalc');
+  //     setBodyHeight('sec');
+  //     setAppPosition();
+  //   } else {
+  //     setBodyHeight('first');
+  //   }
+  // });
   ///////////////
   /// FORMS LOGIC
   ///////////////
@@ -152,10 +152,10 @@ $(document).ready(function(){
       $('.ui-select').removeClass('ui-select--error');
       setTimeout(function() {
         setBodyHeight('second');
-      }, 300);
+      }, 500);
       setTimeout(function() {
         setAppPosition();
-      }, 300);
+      }, 500);
 
       $('.fixed-btn').addClass('visible');
       $('#pasteSelected').text(selectedOption);
