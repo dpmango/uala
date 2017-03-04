@@ -103,6 +103,7 @@ $(document).ready(function(){
   $('.app').slick({
     accessibility: false,
     draggable: false,
+    swipe: false,
     touchMove: false,
     dots: false,
     infinite: false,
