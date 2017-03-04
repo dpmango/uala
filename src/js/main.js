@@ -171,8 +171,7 @@ $(document).ready(function(){
 
       $('.app').slick('slickNext');
       $('body, html').animate({scrollTop: $('#secondPage').offset().top - 30}, 1000);
-
-      $('.fixed-btn').addClass('visible');
+      secondStepActive = true;
       $('#pasteSelected').text(selectedOption);
       return false;
     } else {
@@ -293,6 +292,17 @@ $(document).ready(function(){
       }
     });
     if ($(this).val() != '') $(this).parent('.ui-input').addClass('active');
+  });
+
+  $(window).scrolled(100, function() {
+    var wScroll = $(this).scrollTop();
+    if (secondStepActive){
+      if (wScroll > 350){
+        $('.fixed-btn').addClass('visible');
+      } else {
+        $('.fixed-btn').removeClass('visible');
+      }
+    }
   });
 
 
