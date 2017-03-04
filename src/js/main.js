@@ -95,7 +95,20 @@ $(document).ready(function(){
     dots: true,
     infinite: true,
     speed: 300,
-    arrows: false
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000
+  });
+
+  $('.app').slick({
+    accessibility: false,
+    draggable: false,
+    touchMove: false,
+    dots: false,
+    infinite: false,
+    speed: 300,
+    arrows: false,
+    adaptiveHeight: true
   });
 
   // SET THE HEIGHT OF VIEWPORT
@@ -109,26 +122,25 @@ $(document).ready(function(){
     }
   }
   setTimeout(function() {
-    setBodyHeight('first'); // default is the first screen
+    // setBodyHeight('first'); // default is the first screen
   }, 1000);
 
 
-  function setAppPosition(){
-    var appNegativeMargin = 0 - $('#firstPage').height();
-    $('.app').css(
-      'transform', 'translate3d(0,-'+ $('#firstPage').height() + 'px,0)'
-    ).css('margin-bottom', appNegativeMargin);
-    secondStepActive = true;
-  }
-
+  // function setAppPosition(){
+  //   var appNegativeMargin = 0 - $('#firstPage').height();
+  //   $('.app').css(
+  //     'transform', 'translate3d(0,-'+ $('#firstPage').height() + 'px,0)'
+  //   ).css('margin-bottom', appNegativeMargin);
+  //   secondStepActive = true;
+  // }
 
   // recalculate height with .1s delay
   $(window).resized(function() {
     if (secondStepActive){
-      setBodyHeight('sec');
-      setAppPosition();
+      // setBodyHeight('sec');
+      // setAppPosition();
     } else {
-      setBodyHeight('first');
+      // setBodyHeight('first');
     }
   });
   // $(window).scrolled(100, function() {
@@ -150,12 +162,15 @@ $(document).ready(function(){
     e.preventDefault();
     if(selectedOption != '' ){
       $('.ui-select').removeClass('ui-select--error');
-      setTimeout(function() {
-        setBodyHeight('second');
-      }, 500);
-      setTimeout(function() {
-        setAppPosition();
-      }, 500);
+      // setTimeout(function() {
+      //   setBodyHeight('second');
+      // }, 500);
+      // setTimeout(function() {
+      //   setAppPosition();
+      // }, 500);
+
+      $('.app').slick('slickNext');
+      $('body, html').animate({scrollTop: $('#secondPage').offset().top - 30}, 1000);
 
       $('.fixed-btn').addClass('visible');
       $('#pasteSelected').text(selectedOption);
@@ -231,17 +246,16 @@ $(document).ready(function(){
       }).done(function(data) {
         alert(data);
         if ( data.success) {
+          form.find('.form__title').fadeOut();
           form.find('.form__wrapper').fadeOut();
           form.find('.form__thanks').fadeIn();
 
         }
       }).fail(function(data) {
         // remove
+        form.find('.form__title').fadeOut();
         form.find('.form__wrapper').fadeOut();
         form.find('.form__thanks').fadeIn();
-        setTimeout(function() {
-          form.find('.form__thanks').html('<span>Thank you!</span> <br> We got your contact');
-        }, 1000);
         console.log(data);
       });
     }
@@ -282,20 +296,19 @@ $(document).ready(function(){
   });
 
 
-  $(window).scrolled(10, function() {
-    var wScroll = $(this).scrollTop() + 50;
-    var wWidth = $(window).width();
-    if (wWidth > 900){
-      if (wScroll + $(window).height() < $(document).height() - 100 ){
-        $('.form--fixed').css(
-          'transform', 'translate3d(0,'+ wScroll + 'px,0)'
-        );
-      }
-    } else {
-      $('.form--fixed').css(
-        'transform', 'translate3d(0,'+ 0 + 'px,0)'
-      );
-    }
-  });
-
+  // $(window).scrolled(10, function() {
+  //   var wScroll = $(this).scrollTop() + 50;
+  //   var wWidth = $(window).width();
+  //   if (wWidth > 900){
+  //     if (wScroll + $(window).height() < $(document).height() - 100 ){
+  //       $('.form--fixed').css(
+  //         'transform', 'translate3d(0,'+ wScroll + 'px,0)'
+  //       );
+  //     }
+  //   } else {
+  //     $('.form--fixed').css(
+  //       'transform', 'translate3d(0,'+ 0 + 'px,0)'
+  //     );
+  //   }
+  // });
 });

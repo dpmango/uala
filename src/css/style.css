@@ -245,45 +245,24 @@ body, html {
     font-family: 'Open Sans', sans-serif;
 }
 .app {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-align-items: flex-start;
-            align-items: flex-start;
-    overflow-x: scroll;
-    overflow-y: hidden;
     -webkit-transition: -webkit-transform .6s ease-out;
     transition: -webkit-transform .6s ease-out;
     transition: transform .6s ease-out;
     transition: transform .6s ease-out, -webkit-transform .6s ease-out;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
 }
 .blur {
     -webkit-filter: blur(4px);
             filter: blur(4px);
 }
 .section {
+    position: relative;
     -webkit-flex: 1 0 auto;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
     overflow: hidden;
-    width: 100vw;
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
-    -webkit-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
     -webkit-box-flex: 1;
-}
-.section.active {
-    -webkit-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
 }
 .fixed-container {
     position: absolute;
@@ -304,6 +283,11 @@ body, html {
     }
     .fixed-container > .container {
         height: 100vh;
+    }
+}
+@media(min-width: 900px) {
+    .fixed-container {
+        display: block !important;
     }
 }
 .container {
@@ -467,6 +451,11 @@ body, html {
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
+.ico-thanks {
+    width: 66px;
+    height: 66px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='67px' height='67px' viewBox='0 0 67 67' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3EFill 1%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='Passa-a-Uala---02.1---Thank-you' transform='translate(-802.000000, -132.000000)' fill='%2384CFB1'%3E %3Cg id='Header'%3E %3Cg id='Form' transform='translate(751.000000, 48.000000)'%3E %3Cpath d='M80.208,131.748 C79.56,131.725 78.994,131.467 78.578,131.02 L67.899,119.487 C67.045,118.561 67.102,117.116 68.024,116.263 C68.45,115.871 69,115.656 69.574,115.656 C70.207,115.656 70.816,115.922 71.247,116.385 L80.352,126.22 L98.32,109.123 C98.752,108.717 99.31,108.496 99.895,108.496 C100.517,108.496 101.118,108.753 101.546,109.203 C102.412,110.114 102.375,111.561 101.466,112.428 L81.822,131.12 C81.395,131.525 80.837,131.748 80.249,131.748 L80.208,131.748 Z M84.028,89.508 C76.425,89.508 69.277,92.469 63.9,97.846 C58.523,103.221 55.562,110.369 55.562,117.972 C55.562,125.575 58.523,132.724 63.9,138.101 C69.277,143.477 76.425,146.437 84.028,146.437 C91.631,146.437 98.78,143.477 104.157,138.101 C109.533,132.725 112.494,125.576 112.494,117.972 C112.494,110.368 109.533,103.221 104.157,97.846 C98.78,92.469 91.632,89.508 84.028,89.508 L84.028,89.508 Z M84.028,151 C75.206,151 66.912,147.564 60.674,141.326 C54.436,135.09 51,126.796 51,117.972 C51,109.149 54.436,100.855 60.674,94.62 C66.91,88.382 75.205,84.946 84.028,84.946 C92.853,84.946 101.147,88.382 107.383,94.62 C113.621,100.855 117.057,109.149 117.057,117.972 C117.057,126.796 113.621,135.09 107.383,141.326 C101.145,147.564 92.852,151 84.028,151 L84.028,151 Z' id='Fill-1'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
 /* buttons */
 .btn {
     display: inline-block;
@@ -514,7 +503,7 @@ body, html {
 /* INDEX */
 .hero {
     padding-top: 50px;
-    height: 460px;
+    min-height: 460px;
     background: -webkit-linear-gradient(315deg, #86CED0, #7EC6AA);
     background: linear-gradient(135deg, #86CED0, #7EC6AA);
     color: white;
@@ -523,7 +512,7 @@ body, html {
     margin-top: 20px;
 }
 .hero--short {
-    height: 390px;
+    min-height: 390px;
 }
 .hero__title {
     margin-top: 80px;
@@ -665,17 +654,22 @@ body, html {
 }
 .form__thanks {
     display: none;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    padding-top: 20px;
-    border-top: 1px solid #DDE4E4;
-    text-align: center;
-    font-size: 24px;
+    padding: 30px 33px 0px 33px;
 }
-.form__thanks span {
-    display: inline-block;
-    margin-bottom: 5px;
-    font-weight: 600;
+.form__thanks .ico {
+    margin-top: 50px;
+}
+.form__thanks__heading {
+    margin-top: 90px;
+    font-weight: 700;
+    font-size: 32px;
+    font-family: 'Montserrat';
+}
+.form__thanks__desc {
+    margin-top: 5px;
+    margin-bottom: 90px;
+    font-size: 16px;
+    line-height: 20px;
 }
 @media(max-width: 992px) {
     .form {
@@ -1205,8 +1199,7 @@ body, html {
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 15px 20px;
-    background: #84CFB1;
+    padding: 10px 20px;
     -webkit-transition: -webkit-transform .5s ease-in 0s;
     transition: -webkit-transform .5s ease-in 0s;
     transition: transform .5s ease-in 0s;
@@ -1214,11 +1207,7 @@ body, html {
     -webkit-transform: translate3d(-100%, 0px, 0);
             transform: translate3d(-100%, 0px, 0);
 }
-.fixed-btn .btn--primary {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-radius: 4px;
-}
+.fixed-btn .btn--primary {}
 .fixed-btn .btn--primary:hover {
     -webkit-transform: none;
         -ms-transform: none;

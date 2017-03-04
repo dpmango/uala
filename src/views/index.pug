@@ -17,7 +17,7 @@ html
   body
     .app
       // FIRST SCREEN
-      .section#firstPage
+      .section.active#firstPage
         // HERO
         .hero
           .container
@@ -105,10 +105,13 @@ html
             form(action="#").form.form--fixed#ctaFromSecond
               .form__title.form__title--bg Passa oggi a UALA <br> ottieni subito 12 mesi gratis!
               #closeModal
+              .form__thanks
+                i.ico.ico-thanks
+                .form__thanks__heading Grazie per il tuo interesse Tommaso
+                .form__thanks__desc Un nostro responsabile ti contatterà al più presto
               .form__caption
                 .form__caption__tel Chiamaci al <span>+39 02 80.88.76.12</span>
                 .form__caption__desc o scrivici, è gratuito e senza impegno.
-              .form__thanks
               .form__wrapper.form__wrapper--auto
                 .ui-input
                   label La tua email

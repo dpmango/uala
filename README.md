@@ -22,4 +22,4 @@ __Production__
 - `clean:dist` - clean dist folder to prevent conflicts before build
 
 
-gulp build && git add . && git commit -m "strange padding of 1st screen form" && git push
+gulp build && git add . && git commit -m "another round of fixes" && git push

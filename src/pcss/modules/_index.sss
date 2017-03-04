@@ -1,11 +1,11 @@
 // INDEX
 .hero
   background: linear-gradient(135deg, #86CED0, #7EC6AA)
-  height: 460px
+  min-height: 460px
   padding-top: 50px
   color: white
   &--short
-    height: 390px
+    min-height: 390px
   &__title
     font-family: 'Montserrat'
     font-size: 48px
@@ -113,17 +113,21 @@
       line-height: 21px
 
   &__thanks
-    text-align: center
-    font-size: 24px
-    margin-top: 20px
-    padding-top: 20px
-    margin-bottom: 0px
-    border-top: 1px solid $borderColor
+    padding: 30px 33px 0px 33px
     display: none
-    span
-      display: inline-block
-      font-weight: 600
-      margin-bottom: 5px
+    &__heading
+      font-size: 32px
+      font-family: 'Montserrat'
+      font-weight: 700
+      margin-top: 90px
+    &__desc
+      font-size: 16px
+      line-height: 20px
+      margin-top: 5px
+      margin-bottom: 90px
+    .ico
+      margin-top: 50px
+
 
 @media($desktop)
   .form
@@ -512,17 +516,13 @@
   bottom: 0
   left: 0
   right: 0
-  padding: 15px 20px
-  background: $colorPrimary
+  padding: 10px 20px
   transform: translate3d(-100%, 0px, 0)
   transition: transform .5s ease-in 0s
   &.visible
     @media(width <= 568px)
       transform: translate3d(0, 0px, 0)
   .btn--primary
-    padding-top: 15px
-    padding-bottom: 15px
-    border-radius: 4px
     &:hover
       transform: none
 
