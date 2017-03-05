@@ -307,19 +307,19 @@ $(document).ready(function(){
   });
 
 
-  // $(window).scrolled(10, function() {
-  //   var wScroll = $(this).scrollTop() + 50;
-  //   var wWidth = $(window).width();
-  //   if (wWidth > 900){
-  //     if (wScroll + $(window).height() < $(document).height() - 100 ){
-  //       $('.form--fixed').css(
-  //         'transform', 'translate3d(0,'+ wScroll + 'px,0)'
-  //       );
-  //     }
-  //   } else {
-  //     $('.form--fixed').css(
-  //       'transform', 'translate3d(0,'+ 0 + 'px,0)'
-  //     );
-  //   }
-  // });
+  $(window).scrolled(30, function() {
+    var wScroll = $(this).scrollTop() + 50;
+    var wWidth = $(window).width();
+    if (wWidth > 900){
+      if (wScroll + $(window).height() < $(document).height() - 100 ){
+        $('.form--fixed').css(
+          'transform', 'translate3d(0,'+ wScroll + 'px,0)'
+        );
+      }
+    } else {
+      $('.form--fixed').css(
+        'transform', 'translate3d(0,'+ 0 + 'px,0)'
+      );
+    }
+  });
 });

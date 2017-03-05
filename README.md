@@ -22,4 +22,4 @@ __Production__
 - `clean:dist` - clean dist folder to prevent conflicts before build
 
 
-gulp build && git add . && git commit -m "disable swipe" && git push
+gulp build && git add . && git commit -m "return fixed" && git push
