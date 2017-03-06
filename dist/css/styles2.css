@@ -824,12 +824,6 @@ body, html {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
 }
-.app {
-    -webkit-transition: -webkit-transform .6s ease-out;
-    transition: -webkit-transform .6s ease-out;
-    transition: transform .6s ease-out;
-    transition: transform .6s ease-out, -webkit-transform .6s ease-out;
-}
 .blur {
     -webkit-filter: blur(4px);
             filter: blur(4px);
@@ -845,11 +839,13 @@ body, html {
     -webkit-box-flex: 1;
 }
 .fixed-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    display: none;
+    pointer-events: none;
 }
 .fixed-container .container {
     height: 100%;
@@ -864,10 +860,8 @@ body, html {
     .fixed-container > .container {
         height: 100vh;
     }
-}
-@media(min-width: 900px) {
-    .fixed-container {
-        display: block !important;
+    .fixed-container.hiden-mobile {
+        display: none !important;
     }
 }
 .container {
@@ -1185,14 +1179,15 @@ body, html {
 }
 .form--fixed {
     position: absolute;
+    top: 50px;
     right: 20px;
     z-index: 9;
+    margin-left: 50%;
     -webkit-transition: -webkit-transform .2s ease;
     transition: -webkit-transform .2s ease;
     transition: transform .2s ease;
     transition: transform .2s ease, -webkit-transform .2s ease;
-    -webkit-transform: translate3d(0, 50px, 0);
-            transform: translate3d(0, 50px, 0);
+    pointer-events: all;
 }
 .form__wrapper {
     margin-top: 40px;
@@ -1263,9 +1258,10 @@ body, html {
     }
     .form--fixed {
         position: absolute;
-        top: 50%;
+        top: 55%;
         right: auto;
         left: 50%;
+        margin-left: auto;
         -webkit-transform: translate3d(-50%,-50%,0) !important;
                 transform: translate3d(-50%,-50%,0) !important;
     }

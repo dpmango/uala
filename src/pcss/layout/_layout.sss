@@ -45,9 +45,6 @@ body, html
   overflow-x: hidden
   position: relative
 
-.app
-  transition: transform .6s ease-out
-
 .blur
   filter: blur(4px)
 
@@ -58,11 +55,13 @@ body, html
   flex: 1 0 auto
 
 .fixed-container
-  position: absolute
+  display: none
+  position: fixed
   top: 0
   left: 0
   right: 0
   bottom: 0
+  pointer-events: none
   .container
     height: 100%
 @media(width <= 900px)
@@ -72,9 +71,8 @@ body, html
     z-index: 99
     > .container
       height: 100vh
-@media(width >= 900px)
-  .fixed-container
-    display: block !important
+    &.hiden-mobile
+      display: none !important
 
 
 .container

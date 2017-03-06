@@ -99,34 +99,6 @@ html
 
       // SECOND SCREEN
       .section#secondPage
-        // fixed form first
-        .fixed-container
-          .container
-            form(action="#").form.form--fixed#ctaFromSecond
-              .form__title.form__title--bg Passa oggi a UALA <br> ottieni subito 12 mesi gratis!
-              #closeModal
-              .form__thanks
-                i.ico.ico-thanks
-                .form__thanks__heading Grazie per il tuo interesse Tommaso
-                .form__thanks__desc Un nostro responsabile ti contatterà al più presto
-              .form__caption
-                .form__caption__tel Chiamaci al <span>+39 02 80.88.76.12</span>
-                .form__caption__desc o scrivici, è gratuito e senza impegno.
-              .form__wrapper.form__wrapper--auto
-                .ui-input
-                  label La tua email
-                  input(type="email")
-                .ui-input
-                  label Il tuo telefono
-                  input(type="tel")
-                .ui-input
-                  label Il tuo nome
-                  input(type="text")
-                .ui-radio
-                  input(type='checkbox' name="agree" id="agree" value="yes")
-                  label(for='agree') Accetto <a href='#'>la Informativa sulla Privacy</a>
-                .text-right
-                  button(type="submit").btn.btn--primary richiedi ora
 
         // HERO
         .hero.hero--short
@@ -138,6 +110,8 @@ html
 
                 .text-center.visible-900
                   a(href='#modalForm').btn.btn--primary RICHIEDI ORA
+
+              .col.col--half
 
         // CONTENT
         .content
@@ -205,6 +179,34 @@ html
     .fixed-btn.visible-900
       .text-center
         a(href='#modalForm').btn.btn--primary RICHIEDI ORA
+    .fixed-container.hiden-mobile
+      .container
+        form(action="#").form.form--fixed#ctaFromSecond
+          .form__title.form__title--bg Passa oggi a UALA <br> ottieni subito 12 mesi gratis!
+          #closeModal
+          .form__thanks
+            i.ico.ico-thanks
+            .form__thanks__heading Grazie per il tuo interesse <span>_name_</span>
+            .form__thanks__desc Un nostro responsabile ti contatterà al più presto
+          .form__caption
+            .form__caption__tel Chiamaci al <span>+39 02 80.88.76.12</span>
+            .form__caption__desc o scrivici, è gratuito e senza impegno.
+          .form__wrapper.form__wrapper--auto
+            .ui-input
+              label La tua email
+              input(type="email")
+            .ui-input
+              label Il tuo telefono
+              input(type="tel")
+            .ui-input
+              label Il tuo nome
+              input(type="text")
+            .ui-radio
+              input(type='checkbox' name="agree" id="agree" value="yes")
+              label(for='agree') Accetto <a href='#'>la Informativa sulla Privacy</a>
+            .text-right
+              button(type="submit").btn.btn--primary richiedi ora
+
 
   //build:js js/scripts.min.js
   script(src="components/jquery/dist/jquery.min.js")

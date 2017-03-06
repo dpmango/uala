@@ -79,10 +79,12 @@
       padding-bottom: 30px
   &--fixed
     position: absolute
-    transform: translate3d(0, 50px, 0)
+    margin-left: 50%
     transition: transform .2s ease
+    top: 50px
     right: 20px
     z-index: 9
+    pointer-events: all
   &__wrapper
     padding-left: 33px
     padding-right: 33px
@@ -139,9 +141,10 @@
     margin-right: auto
     &--fixed
       position: absolute
+      margin-left: auto
       left: 50%
       right: auto
-      top: 50%
+      top: 55%
       transform: translate3d(-50%,-50%,0) !important
 
 @media($mobile)
