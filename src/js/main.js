@@ -61,9 +61,11 @@ $(document).ready(function(){
     $.each(container, function(key, value) {
         if (!$(value).is(e.target) && $(value).has(e.target).length === 0) {
           if (secondStepActive){
-            $('.fixed-container').addClass('hiden-mobile').fadeOut();
-            $('.hero, .content, .footer').removeClass('blur');
-            $('.fixed-btn').addClass('visible');  
+            if ( $(window).width() < 900 ){
+              $('.fixed-container').addClass('hiden-mobile').fadeOut();
+              $('.hero, .content, .footer').removeClass('blur');
+              $('.fixed-btn').addClass('visible');  
+            }
           }
         }
     });
