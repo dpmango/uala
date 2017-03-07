@@ -55,6 +55,20 @@ $(document).ready(function(){
     $('.fixed-btn').addClass('visible');
   });
 
+  $(document).mouseup(function (e) {
+    var container = new Array();
+    container.push($('.form--fixed'));
+    $.each(container, function(key, value) {
+        if (!$(value).is(e.target) && $(value).has(e.target).length === 0) {
+          if (secondStepActive){
+            $('.fixed-container').addClass('hiden-mobile').fadeOut();
+            $('.hero, .content, .footer').removeClass('blur');
+            $('.fixed-btn').addClass('visible');  
+          }
+        }
+    });
+  });
+
   $('#owlTestimonials').slick({
     dots: true,
     infinite: true,
@@ -198,6 +212,16 @@ $(document).ready(function(){
     $(this).closest('.ui-select').find('label').addClass('selected');
     $('.ui-select').removeClass('ui-select--error');
     selectedOption = currentValue;
+  });
+
+  $(document).mouseup(function (e) {
+    var container = new Array();
+    container.push($('.ui-select'));
+    $.each(container, function(key, value) {
+        if (!$(value).is(e.target) && $(value).has(e.target).length === 0) {
+            $(value).removeClass('active');
+        }
+    });
   });
 
   // custom input trigger active class
