@@ -217,10 +217,12 @@ $(document).ready(function(){
   });
 
   $(window).resize(function(){
-    if ( $(window).width() < 900 ){
+    if (secondStepActive){
+      if ( $(window).width() < 900 ){
 
-    } else{
-      $('.fixed-container').show();
+      } else{
+        $('.fixed-container').show();
+      }
     }
   });
   $(window).scrolled(100, function() {
