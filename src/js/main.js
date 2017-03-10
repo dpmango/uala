@@ -64,7 +64,7 @@ $(document).ready(function(){
             if ( $(window).width() < 900 ){
               $('.fixed-container').addClass('hiden-mobile').fadeOut();
               $('.hero, .content, .footer').removeClass('blur');
-              $('.fixed-btn').addClass('visible');  
+              $('.fixed-btn').addClass('visible');
             }
           }
         }
