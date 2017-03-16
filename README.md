@@ -22,4 +22,4 @@ __Production__
 - `clean:dist` - clean dist folder to prevent conflicts before build
 
 
-gulp build && git add . && git commit -m "tablet fix and heading" && git push
+gulp build && git add . && git commit -m "typo" && git push
