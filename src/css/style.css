@@ -631,6 +631,9 @@ body, html {
 .form__caption__tel span {
     font-weight: 700;
 }
+.form__caption__tel a {
+    text-decoration: none;
+}
 .form__caption__desc {
     margin-top: 5px;
     letter-spacing: 1px;
@@ -767,6 +770,16 @@ body, html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
 }
+.features__title {
+    margin-top: 45px;
+    margin-bottom: 20px;
+    color: #939999;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Montserrat';
+}
 .features__item {
     position: relative;
     -webkit-flex: 1 1 50%;
@@ -798,6 +811,9 @@ body, html {
     line-height: 22px;
     -webkit-box-flex: 1;
 }
+.features__item:nth-child(1), .features__item:nth-child(2) {
+    margin-top: 0px;
+}
 .features__item__wrap {
     display: -webkit-flex;
     display: -ms-flex;
@@ -815,7 +831,7 @@ body, html {
 }
 @media(max-width: 900px) {
     .features {
-        padding-top: 55px;
+        padding-top: 15px;
     }
     .features__item {
         -webkit-flex: 1 1 100%;
@@ -972,6 +988,9 @@ body, html {
     letter-spacing: 0px;
     font-size: 20px;
     line-height: 32px;
+}
+.content__contact a {
+    text-decoration: none;
 }
 .content__contact span {
     display: block;
@@ -1208,7 +1227,7 @@ body, html {
             transform: none;
 }
 .fixed-btn.visible {}
-@media(max-width: 568px) {
+@media(max-width: 900px) {
     .fixed-btn.visible {
         -webkit-transform: translate3d(0, 0px, 0);
                 transform: translate3d(0, 0px, 0);

@@ -108,6 +108,8 @@
       letter-spacing: 1px
       span
         font-weight: 700
+      a
+        text-decoration: none
     &__desc
       margin-top: 5px
       font-size: 14px
@@ -209,11 +211,22 @@
   justify-content: center
   padding-top: 15px
   margin-bottom: 40px
+  &__title
+    font-size: 14px
+    font-family: 'Montserrat'
+    font-weight: 600
+    color: #939999
+    margin-bottom: 20px
+    letter-spacing: 2px
+    text-transform: uppercase
+    margin-top: 45px
   &__item
     flex: 1 1 50%
     position: relative
     margin-top: 50px
     margin-bottom: 40px
+    &:nth-child(1), &:nth-child(2)
+      margin-top: 0px
     &__wrap
       display: -webkit-flex
       display: -ms-flex
@@ -235,7 +248,7 @@
 
 @media(width <= 900px)
   .features
-    padding-top: 55px
+    padding-top: 15px
     &__item
       flex: 1 1 100%
       margin-top: 10px
@@ -362,6 +375,8 @@
     border-radius: 8px
     padding: 38px 35px
     letter-spacing: 0px
+    a
+      text-decoration: none
     span
       letter-spacing: .5px
       display: block
@@ -527,7 +542,7 @@
   transform: translate3d(-100%, 0px, 0)
   transition: transform .5s ease-in 0s
   &.visible
-    @media(width <= 568px)
+    @media(width <= 900px)
       transform: translate3d(0, 0px, 0)
   .btn--primary
     &:hover
